@@ -25,15 +25,17 @@
     </div>
     {% include nav.html %}
   </div>
-
-<div>	
-<nav style="text-align: left; padding-left: 1em;">
-<ul><li></li><li><a href="#two">naše služby</a></li><li><a href="#portfolio">portfolio</a></li><li><a href="#one">o nás</a></li><li><a href="#three">kontakt</a></li></ul>
-</nav>
-</div>
 </section>
+
 <!-- Wrapper -->
-<div id="wrapper"><section class="wrapper" id="hero" style="background-image: url('assets/images/background.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white;"><h1>PROvizualizace</h1><p>3D vizualizace, Projektová dokumentace, Návrhy interiérů/exteriérů </p></section><a href="#two"></a><section class="wrapper style3 fade-up" id="two">
+<div id="wrapper">
+<section class="wrapper" id="hero" style="background-image: url('assets/images/background.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white;">
+  <h1>PROvizualizace</h1>
+  <p>3D vizualizace, Projektová dokumentace, Návrhy interiérů/exteriérů </p>
+</section>
+
+<a href="#two"></a>
+<section class="wrapper style3 fade-up" id="two">
 <div class="inner">
 <h2>naše služby</h2>
 <p>nabízíme zpracování projektové dokumentace k menším objektům, stavebním úpravám - tvorba výkresů, 3D modelů a architektonická vizualizace. Podle dodaných podkladů (šablony, náčrty, výkresy v PDF)
@@ -60,10 +62,17 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 <p>pro SP</p>
 </section>
 </div>
-<ul class="actions">
-</ul>
 </div>
-</section><section class="wrapper style2 spotlights" id="portfolio"><div class="inner"><h2>Portfolio</h2><p>Tady budou obrázky a krátká videa z našich projektů.</p></div></section><section class="wrapper style2 spotlights" id="one">
+</section>
+
+<section class="wrapper style2 spotlights" id="portfolio">
+  <div class="inner">
+    <h2>Portfolio</h2>
+    <p>Tady budou obrázky a krátká videa z našich projektů.</p>
+  </div>
+</section>
+
+<section class="wrapper style2 spotlights" id="one">
 <section>
 <div class="content">
 <div class="inner">
@@ -86,9 +95,9 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 </div>
 </div>
 </section>
-<!-- Two -->
-<!-- Three -->
-</section><section class="wrapper style1 fade-up" id="three">
+</section>
+
+<section class="wrapper style1 fade-up" id="three">
 <div class="inner">
 <h2>kontakt</h2>
 <p>nebojte se napsat email nebo zavolat</p>
@@ -122,9 +131,8 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 </li>
 <li>
 <h3>telefon</h3>
-<span> 722 411 *** - Dvořák David </span>     
-	
-<span> 774 664 *** - Koten Adam </span>
+<span>+420 722 411 *** - Dvořák David</span><br/>
+<span>+420 774 664 *** - Koten Adam</span>
 </li>
 <li>
 <h3>Social</h3>
@@ -137,40 +145,21 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 </ul>
 </li>
 </ul>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("contact-form");
-        form.addEventListener("submit", async function (e) {
-            e.preventDefault();
-            const data = new FormData(form);
-            const response = await fetch(form.action, {
-                method: "POST",
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-            if (response.ok) {
-                alert("Zpráva byla úspěšně odeslána.");
-                form.reset();
-            } else {
-                alert("Došlo k chybě. Zkuste to prosím znovu.");
-            }
-        });
-    });
-    </script>
 </section>
 </div>
 </div>
-</section></div>
+</section>
+</div>
+
 <!-- Footer -->
 <footer class="wrapper style1-alt" id="footer">
-<div class="inner">
-
-<li>© PROvizualizace. All rights reserved.</li>
-
-</div>
+  <div class="inner">
+    <ul class="menu">
+      <li>© PROvizualizace. All rights reserved.</li>
+    </ul>
+  </div>
 </footer>
+
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -200,5 +189,6 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
             }
         });
     });
-    </script></body>
+</script>
+</body>
 </html>
