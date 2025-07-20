@@ -118,6 +118,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         object-fit: cover;
         position: relative;
         z-index: 1;
+        cursor: pointer;
       }
 
       .carousel-button {
@@ -154,6 +155,48 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         font-weight: bold;
         font-size: 1.25em;
       }
+
+      /* Lightbox */
+      .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+      }
+
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        animation: fadeIn 0.3s;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+
+      .lightbox-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 2100;
+      }
+
+      .lightbox-button.prev { left: 20px; }
+      .lightbox-button.next { right: 20px; }
     </style>
 
     <!-- ŘÁDEK 1 -->
@@ -234,6 +277,13 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       </button>
     </div>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-button prev" onclick="changeImage(-1)">&#10094;</button>
+      <img src="" alt="Zvětšený obrázek">
+      <button class="lightbox-button next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
     <script>
       function scrollCarouselCenter(id, direction) {
         const track = document.getElementById(id);
@@ -263,10 +313,38 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 
         track.scrollTo({ left: scrollTo, behavior: 'smooth' });
       }
+
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+      let currentImages = [];
+      let currentIndex = 0;
+
+      document.querySelectorAll('.carousel-track img').forEach(img => {
+        img.addEventListener('click', (e) => {
+          currentImages = Array.from(e.target.closest('.carousel-track').querySelectorAll('img'));
+          currentIndex = currentImages.indexOf(e.target);
+          openLightbox();
+        });
+      });
+
+      function openLightbox() {
+        lightboxImg.src = currentImages[currentIndex].src;
+        lightbox.style.display = 'flex';
+      }
+
+      function changeImage(direction) {
+        currentIndex = (currentIndex + direction + currentImages.length) % currentImages.length;
+        lightboxImg.src = currentImages[currentIndex].src;
+      }
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+        }
+      });
     </script>
   </div>
 </section>
-
 
 <section class="wrapper style2 spotlights" id="one">
 <section>
