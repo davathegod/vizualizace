@@ -89,7 +89,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
   <style>
   .carousel-container {
     position: relative;
-    overflow: visible; /* umožní zvětšení do výšky i šířky */
+    overflow: visible;
     width: 100%;
     margin-bottom: 2em;
   }
@@ -97,14 +97,16 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
   .carousel-track {
     display: flex;
     gap: 1em;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     overflow-y: visible;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 1;
   }
 
   .carousel-track::-webkit-scrollbar {
-    display: none; /* schovat scrollbar */
+    display: none;
   }
 
   .carousel-track img,
@@ -117,12 +119,13 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     border-radius: 0.5em;
     transform-origin: center center;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    pointer-events: auto;
   }
 
   .carousel-track img:hover,
   .carousel-track video:hover {
-    transform: scale(2); /* 200 % zvětšení do všech směrů */
+    transform: scale(2); /* Zvětší 2× do šířky i výšky */
     z-index: 1000;
   }
 
@@ -134,17 +137,17 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
     color: white;
     padding: 0 0.25em;
   }
 
   .carousel-button.left {
-    left: -40px; /* změněno z -64px */
+    left: -45px;
   }
 
   .carousel-button.right {
-    right: -40px; /* změněno z -64px */
+    right: -45px;
   }
 
   .portfolio-row-title {
@@ -153,6 +156,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     font-size: 1.25em;
   }
 </style>
+
     <!-- Obrázky - Řádek 1 -->
     <div class="portfolio-row-title">Vizualizace - interiéry</div>
     <div class="carousel-container">
