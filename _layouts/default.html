@@ -86,191 +86,172 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <h2>Portfolio</h2>
     <p>Ukázky projektů – obrázky a videa.</p>
 
-    <style>
-      .carousel-container {
-        position: relative;
-        overflow: visible;
-        width: 100%;
-        margin-bottom: 2em;
-      }
+<style>
+  .carousel-container {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    margin-bottom: 2em;
+  }
 
-      .carousel-track {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        white-space: nowrap;
-        padding: 1em 3em;
-        box-sizing: border-box;
-      }
+  .carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    padding: 1em 3em;
+    box-sizing: border-box;
+  }
 
-      .carousel-track::-webkit-scrollbar {
-        display: none;
-      }
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
 
-      .carousel-track img,
-      .carousel-track video {
-        height: 400px;
-        width: auto;
-        margin-right: 1em;
-        flex-shrink: 0;
-        border-radius: 0.5em;
-        object-fit: cover;
-        position: relative;
-        z-index: 1;
-      }
+  .carousel-track img,
+  .carousel-track video {
+    height: 400px;
+    width: auto;
+    margin-right: 1em;
+    flex-shrink: 0;
+    border-radius: 0.5em;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
 
-      .carousel-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 45px;
-        height: 90px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-      }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
 
-      .carousel-button.left {
-        left: -60px;
-      }
+  .carousel-button.left {
+    left: -60px;
+  }
 
-      .carousel-button.right {
-        right: -60px;
-      }
+  .carousel-button.right {
+    right: -60px;
+  }
 
-      .carousel-button svg {
-        display: block;
-      }
+  .carousel-button svg {
+    display: block;
+  }
 
-      .carousel-button:hover {
-        background-color: #111;
-        color: #fff;
-      }
+  .carousel-button:hover {
+    background-color: #111;
+    color: #fff;
+  }
 
-      .portfolio-row-title {
-        margin: 1em 0 0.5em;
-        font-weight: bold;
-        font-size: 1.25em;
-      }
-    </style>
+  .portfolio-row-title {
+    margin: 1em 0 0.5em;
+    font-weight: bold;
+    font-size: 1.25em;
+  }
+</style>
 
-    <!-- Interiéry -->
-    <div class="portfolio-row-title">Vizualizace – interiéry</div>
-    <div class="carousel-container">
-      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg1', -1)">
-        <svg width="24" height="48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="carousel-track" id="carouselTrackImg1">
-        <img src="images/1np.jpg" alt="1np" />
-        <img src="images/pic01.jpg" />
-        <img src="images/pic02.jpg" />
-        <img src="images/pic03.jpg" />
-        <img src="images/pic01.jpg" />
-        <img src="images/pic03.jpg" />
-        <img src="images/1np.jpg" />
-        <img src="images/pic02.jpg" />
-      </div>
-      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg1', 1)">
-        <svg width="24" height="48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
+<!-- Obrázky – interiéry -->
+<div class="portfolio-row-title">Vizualizace – interiéry</div>
+<div class="carousel-container">
+  <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg1', -1)">
+    <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="carousel-track" id="carouselTrackImg1">
+    <img src="images/1np.jpg" alt="1np" />
+    <img src="images/pic01.jpg" />
+    <img src="images/pic02.jpg" />
+    <img src="images/pic03.jpg" />
+    <img src="images/pic01.jpg" />
+    <img src="images/pic03.jpg" />
+    <img src="images/1np.jpg" />
+    <img src="images/pic02.jpg" />
+  </div>
+  <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg1', 1)">
+    <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
 
-    <!-- Exteriéry -->
-    <div class="portfolio-row-title">Vizualizace – exteriéry</div>
-    <div class="carousel-container">
-      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg2', -1)">
-        <svg width="24" height="48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="carousel-track" id="carouselTrackImg2">
-        <img src="images/pic01.jpg" />
-        <img src="images/pic03.jpg" />
-        <img src="images/1np.jpg" />
-        <img src="images/pic02.jpg" />
-        <img src="images/pic01.jpg" />
-        <img src="images/pic03.jpg" />
-        <img src="images/1np.jpg" />
-        <img src="images/pic02.jpg" />
-      </div>
-      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg2', 1)">
-        <svg width="24" height="48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
+<!-- Obrázky – exteriéry -->
+<div class="portfolio-row-title">Vizualizace – exteriéry</div>
+<div class="carousel-container">
+  <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg2', -1)">
+    <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="carousel-track" id="carouselTrackImg2">
+    <img src="images/pic01.jpg" />
+    <img src="images/pic03.jpg" />
+    <img src="images/1np.jpg" />
+    <img src="images/pic02.jpg" />
+    <img src="images/pic01.jpg" />
+    <img src="images/pic03.jpg" />
+    <img src="images/1np.jpg" />
+    <img src="images/pic02.jpg" />
+  </div>
+  <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg2', 1)">
+    <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
 
-    <!-- Videa 1 -->
-    <div class="portfolio-row-title">Animace a průchody</div>
-    <div class="carousel-container">
-      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid1', -1)">
-        <svg width="24" height="48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="carousel-track" id="carouselTrackVid1">
-        <video src="images/vid1.mp4" controls loop muted></video>
-        <video src="images/vid2.mp4" controls loop muted></video>
-        <img src="images/pic02.jpg" />
-        <video src="images/vid2.mp4" controls loop muted></video>
-        <video src="images/vid1.mp4" controls loop muted></video>
-      </div>
-      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid1', 1)">
-        <svg width="24" height="48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
+<!-- Videa – Animace -->
+<div class="portfolio-row-title">Animace a průchody</div>
+<div class="carousel-container">
+  <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid1', -1)">
+    <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="carousel-track" id="carouselTrackVid1">
+    <video src="images/vid1.mp4" controls loop muted></video>
+    <video src="images/vid2.mp4" controls loop muted></video>
+    <img src="images/pic02.jpg" />
+    <video src="images/vid2.mp4" controls loop muted></video>
+    <video src="images/vid1.mp4" controls loop muted></video>
+  </div>
+  <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid1', 1)">
+    <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
 
-    <!-- Videa 2 -->
-    <div class="portfolio-row-title">Zachycení detailů</div>
-    <div class="carousel-container">
-      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid2', -1)">
-        <svg width="24" height="48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="carousel-track" id="carouselTrackVid2">
-        <video src="images/vid2.mp4" controls loop muted></video>
-        <video src="images/vid1.mp4" controls loop muted></video>
-        <img src="images/pic02.jpg" />
-        <video src="images/vid2.mp4" controls loop muted></video>
-        <video src="images/vid1.mp4" controls loop muted></video>
-      </div>
-      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid2', 1)">
-        <svg width="24" height="48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
+<!-- Videa – Detaily -->
+<div class="portfolio-row-title">Zachycení detailů</div>
+<div class="carousel-container">
+  <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid2', -1)">
+    <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="carousel-track" id="carouselTrackVid2">
+    <video src="images/vid2.mp4" controls loop muted></video>
+    <video src="images/vid1.mp4" controls loop muted></video>
+    <img src="images/pic02.jpg" />
+    <video src="images/vid2.mp4" controls loop muted></video>
+    <video src="images/vid1.mp4" controls loop muted></video>
+  </div>
+  <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid2', 1)">
+    <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
 
 <script>
   function scrollCarousel(id, direction) {
     const track = document.getElementById(id);
-    const items = Array.from(track.children);
-    const containerRect = track.getBoundingClientRect();
-    const scrollLeft = track.scrollLeft;
+    const item = track.querySelector('img, video');
+    if (!item) return;
 
-    // Najdi nejbližší prvek vpravo nebo vlevo podle směru
-    let targetIndex = 0;
-    for (let i = 0; i < items.length; i++) {
-      const item = items[i];
-      const itemLeft = item.offsetLeft;
-      const itemRight = itemLeft + item.offsetWidth;
-
-      if (direction > 0 && itemLeft > scrollLeft + 10) {
-        targetIndex = i;
-        break;
-      } else if (direction < 0 && itemRight < scrollLeft - 10) {
-        targetIndex = i;
-      }
-    }
-
-    // Zajisti, že nepřekročíme rozsah
-    const target = items[targetIndex];
-    if (target) {
-      const targetCenter = target.offsetLeft - (track.clientWidth / 2) + (target.offsetWidth / 2);
-      track.scrollTo({ left: targetCenter, behavior: 'smooth' });
-    }
+    const scrollAmount = item.offsetWidth + parseInt(getComputedStyle(item).marginRight || 0);
+    track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
   }
 </script>
+
   </div>
 </section>
 
