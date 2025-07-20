@@ -86,71 +86,72 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <h2>Portfolio</h2>
     <p>Ukázky projektů – obrázky a videa.</p>
 
-    <style>
- .carousel-container {
-  position: relative;
-  overflow: visible;
-  width: 100%;
-  margin-bottom: 2em;
-}
+  <style>
+  .carousel-container {
+    position: relative;
+    overflow: visible; /* umožní zvětšení do výšky i šířky */
+    width: 100%;
+    margin-bottom: 2em;
+  }
 
-.carousel-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  gap: 1em;
-}
+  .carousel-track {
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: visible;
+  }
 
-.carousel-track::-webkit-scrollbar {
-  display: none;
-}
+  .carousel-track::-webkit-scrollbar {
+    display: none; /* schovat scrollbar */
+  }
 
-.carousel-track img,
-.carousel-track video {
-  width: 220px;
-  height: 150px; /* pevná výška */
-  flex-shrink: 0;
-  border-radius: 0.5em;
-  object-fit: cover;
-  transition: transform 0.3s ease, z-index 0.3s ease;
-  z-index: 1;
-  transform-origin: center center; /* důležité pro rovnoměrné zvětšení */
-}
+  .carousel-track img,
+  .carousel-track video {
+    width: 220px;
+    height: 150px;
+    flex-shrink: 0;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 0.5em;
+    transform-origin: center center;
+    position: relative;
+    z-index: 1;
+  }
 
-.carousel-track img:hover,
-.carousel-track video:hover {
-  transform: scale(2); /* zvětší výšku i šířku */
-  z-index: 10;
-  position: relative;
-}
+  .carousel-track img:hover,
+  .carousel-track video:hover {
+    transform: scale(2); /* 200 % zvětšení do všech směrů */
+    z-index: 1000;
+  }
 
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2em;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 2;
-  color: white;
-  padding: 0 0.25em;
-}
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+    padding: 0 0.25em;
+  }
 
-.carousel-button.left {
-  left: -32px;
-}
+  .carousel-button.left {
+    left: -40px; /* změněno z -64px */
+  }
 
-.carousel-button.right {
-  right: -32px;
-}
+  .carousel-button.right {
+    right: -40px; /* změněno z -64px */
+  }
 
-.portfolio-row-title {
-  margin: 1em 0 0.5em;
-  font-weight: bold;
-  font-size: 1.25em;
-}
+  .portfolio-row-title {
+    margin: 1em 0 0.5em;
+    font-weight: bold;
+    font-size: 1.25em;
+  }
 </style>
     <!-- Obrázky - Řádek 1 -->
     <div class="portfolio-row-title">Vizualizace - interiéry</div>
