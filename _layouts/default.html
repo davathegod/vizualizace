@@ -331,6 +331,18 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 
         track.scrollTo({ left: scrollTo, behavior: 'smooth' });
       }
+	 document.addEventListener('DOMContentLoaded', () => {
+    const carouselTracks = document.querySelectorAll('.carousel-track');
+
+    carouselTracks.forEach(track => {
+      const items = track.querySelectorAll('img, video');
+      items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          openLightbox(index, track.id);
+        });
+      });
+    });
+  });  
     </script>
   </div>
 </section>
