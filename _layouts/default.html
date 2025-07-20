@@ -242,13 +242,37 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 </div>
 
 <script>
-  function scrollCarousel(id, direction) {
+  function scrollCarouselCenter(id, direction) {
     const track = document.getElementById(id);
-    const item = track.querySelector('img, video');
-    if (!item) return;
+    const items = track.querySelectorAll('img, video');
+    if (items.length === 0) return;
 
-    const scrollAmount = item.offsetWidth + parseInt(getComputedStyle(item).marginRight || 0);
-    track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+    const trackRect = track.getBoundingClientRect();
+    const trackCenter = track.scrollLeft + trackRect.width / 2;
+
+    // Najdi aktuálně vycentrovaný prvek
+    let currentIndex = 0;
+    let minDiff = Infinity;
+
+    items.forEach((item, i) => {
+      const itemRect = item.getBoundingClientRect();
+      const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+      const diff = Math.abs(track.scrollLeft + trackRect.width / 2 - itemCenter);
+      if (diff < minDiff) {
+        minDiff = diff;
+        currentIndex = i;
+      }
+    });
+
+    // Nový index podle směru (1 = vpravo, -1 = vlevo)
+    let newIndex = currentIndex + direction;
+    newIndex = Math.max(0, Math.min(items.length - 1, newIndex));
+
+    const target = items[newIndex];
+    const targetCenter = target.offsetLeft + target.offsetWidth / 2;
+    const scrollTo = targetCenter - trackRect.width / 2;
+
+    track.scrollTo({ left: scrollTo, behavior: 'smooth' });
   }
 </script>
 
