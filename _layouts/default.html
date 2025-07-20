@@ -108,12 +108,14 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 
       .carousel-track img,
       .carousel-track video {
-        width: 650px;
-        height: auto;
+        height: 400px;
+        width: auto;
         margin-right: 1em;
         flex-shrink: 0;
         border-radius: 0.5em;
         object-fit: cover;
+        position: relative;
+        z-index: 1;
       }
 
       .carousel-button {
@@ -130,11 +132,11 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       }
 
       .carousel-button.left {
-        left: -58px;
+        left: -55px;
       }
 
       .carousel-button.right {
-        right: -58px;
+        right: -55px;
       }
 
       .portfolio-row-title {
@@ -144,22 +146,20 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       }
     </style>
 
-    <!-- Vizualizace – interiéry -->
+    <!-- Obrázky - Řádek 1 -->
     <div class="portfolio-row-title">Vizualizace – interiéry</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg1', -1)">‹</button>
       <div class="carousel-track" id="carouselTrackImg1">
-        <img src="images/1np.jpg" />
+        <img src="images/1np.jpg" alt="1np" />
         <img src="images/pic01.jpg" />
         <img src="images/pic02.jpg" />
-        <img src="images/pic03.jpg" />
-        <img src="images/pic01.jpg" />
         <img src="images/pic03.jpg" />
       </div>
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg1', 1)">›</button>
     </div>
 
-    <!-- Vizualizace – exteriéry -->
+    <!-- Obrázky - Řádek 2 -->
     <div class="portfolio-row-title">Vizualizace – exteriéry</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg2', -1)">‹</button>
@@ -168,32 +168,26 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         <img src="images/pic03.jpg" />
         <img src="images/1np.jpg" />
         <img src="images/pic02.jpg" />
-        <img src="images/pic01.jpg" />
-        <img src="images/pic03.jpg" />
       </div>
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg2', 1)">›</button>
     </div>
 
-    <!-- Animace a průchody -->
+    <!-- Videa - Řádek 3 -->
     <div class="portfolio-row-title">Animace a průchody</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid1', -1)">‹</button>
       <div class="carousel-track" id="carouselTrackVid1">
         <video src="images/vid1.mp4" controls loop muted></video>
         <video src="images/vid2.mp4" controls loop muted></video>
-        <video src="images/vid1.mp4" controls loop muted></video>
-        <video src="images/vid2.mp4" controls loop muted></video>
       </div>
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid1', 1)">›</button>
     </div>
 
-    <!-- Zachycení detailů -->
+    <!-- Videa - Řádek 4 -->
     <div class="portfolio-row-title">Zachycení detailů</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid2', -1)">‹</button>
       <div class="carousel-track" id="carouselTrackVid2">
-        <video src="images/vid2.mp4" controls loop muted></video>
-        <video src="images/vid1.mp4" controls loop muted></video>
         <video src="images/vid2.mp4" controls loop muted></video>
         <video src="images/vid1.mp4" controls loop muted></video>
       </div>
@@ -203,7 +197,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <script>
       function scrollCarousel(id, direction) {
         const track = document.getElementById(id);
-        const scrollAmount = 660; // šířka obrázku + mezera
+        const scrollAmount = 660; // šířka obrázku + mezera (pro fixní velikosti se může upravit)
         track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
       }
     </script>
