@@ -148,26 +148,30 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       }
 
       /* Lightbox */
-      .lightbox {
-        display: none;
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-      }
+    .lightbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
 
       .lightbox.active {
         display: flex;
       }
 
-      .lightbox-content {
-        max-width: 90%;
-        max-height: 90%;
-	       transform: translateY(-1em);
-      }
+     .lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* zajistí, že se celý obsah vejde */
+}
 
       .lightbox-content img,
       .lightbox-content video {
