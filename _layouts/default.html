@@ -148,61 +148,37 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       }
 
       /* Lightbox */
-    .lightbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-}
-
-      .lightbox.active {
-        display: flex;
+      #lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
       }
 
-     .lightbox-content {
-  max-width: 90%;
-  max-height: 90%;
-  width: auto;
-  height: auto;
-  object-fit: contain; /* zajistí, že se celý obsah vejde */
-}
-
-      .lightbox-content img,
-      .lightbox-content video {
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 10px;
+      #lightbox img,
+      #lightbox video {
+        max-width: 90%;
+        max-height: 90%;
       }
 
-      .lightbox-close,
-      .lightbox-prev,
-      .lightbox-next {
+      .lightbox-close, .lightbox-prev, .lightbox-next {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         color: white;
         font-size: 2em;
         cursor: pointer;
         user-select: none;
-        padding: 10px;
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
+        z-index: 10000;
       }
 
-      .lightbox-close {
-        top: 20px;
-        right: 20px;
-        transform: none;
-      }
-
-      .lightbox-prev { left: 30px; }
-      .lightbox-next { right: 30px; }
+      .lightbox-close { top: 20px; right: 40px; }
+      .lightbox-prev { top: 50%; left: 20px; transform: translateY(-50%); }
+      .lightbox-next { top: 50%; right: 20px; transform: translateY(-50%); }
     </style>
 	  
     <!-- ŘÁDEK 1 -->
@@ -283,14 +259,53 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       </button>
     </div>
 
-   <div class="lightbox" id="lightbox">
+    <div id="lightbox">
       <span class="lightbox-close" onclick="closeLightbox()">×</span>
-      <span class="lightbox-prev" onclick="changeLightbox(-1)">‹</span>
-      <div class="lightbox-content" id="lightboxContent"></div>
-      <span class="lightbox-next" onclick="changeLightbox(1)">›</span>
+      <span class="lightbox-prev" onclick="changeLightbox(-1)">❮</span>
+      <span class="lightbox-next" onclick="changeLightbox(1)">❯</span>
+      <img id="lightbox-img" style="display:none;" />
+      <video id="lightbox-video" controls style="display:none;"></video>
     </div>
 
-    <script>
+   <script>
+      let currentItems = [];
+      let currentIndex = 0;
+
+      function openLightbox(index, trackId) {
+        const track = document.getElementById(trackId);
+        currentItems = Array.from(track.querySelectorAll('img, video'));
+        currentIndex = index;
+        showLightboxItem(currentIndex);
+        document.getElementById('lightbox').style.display = 'flex';
+      }
+
+      function showLightboxItem(index) {
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxVideo = document.getElementById('lightbox-video');
+        const src = currentItems[index].getAttribute('src');
+
+        if (currentItems[index].tagName.toLowerCase() === 'img') {
+          lightboxVideo.style.display = 'none';
+          lightboxVideo.pause();
+          lightboxImg.src = src;
+          lightboxImg.style.display = 'block';
+        } else {
+          lightboxImg.style.display = 'none';
+          lightboxVideo.src = src;
+          lightboxVideo.style.display = 'block';
+        }
+      }
+
+      function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+        document.getElementById('lightbox-video').pause();
+      }
+
+      function changeLightbox(direction) {
+        currentIndex = (currentIndex + direction + currentItems.length) % currentItems.length;
+        showLightboxItem(currentIndex);
+      }
+
       function scrollCarouselCenter(id, direction) {
         const track = document.getElementById(id);
         const items = track.querySelectorAll('img, video');
@@ -312,42 +327,9 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         let newIndex = currentIndex + direction;
         newIndex = Math.max(0, Math.min(items.length - 1, newIndex));
         const target = items[newIndex];
-        const targetCenter = target.offsetLeft + target.offsetWidth / 2;
-        const scrollTo = targetCenter - trackRect.width / 2;
+        const scrollTo = target.offsetLeft + target.offsetWidth / 2 - trackRect.width / 2;
 
         track.scrollTo({ left: scrollTo, behavior: 'smooth' });
-      }
-
-      // Lightbox
-      let galleryItems = [];
-      let currentIndex = 0;
-
-      document.querySelectorAll('.carousel-track img, .carousel-track video').forEach((item, index) => {
-        item.addEventListener('click', () => {
-          galleryItems = Array.from(document.querySelectorAll('.carousel-track img, .carousel-track video'));
-          currentIndex = galleryItems.indexOf(item);
-          openLightbox();
-        });
-      });
-
-      function openLightbox() {
-        const lightbox = document.getElementById('lightbox');
-        const content = document.getElementById('lightboxContent');
-        const currentItem = galleryItems[currentIndex].cloneNode(true);
-        currentItem.removeAttribute('height');
-        currentItem.removeAttribute('width');
-        content.innerHTML = '';
-        content.appendChild(currentItem);
-        lightbox.classList.add('active');
-      }
-
-      function closeLightbox() {
-        document.getElementById('lightbox').classList.remove('active');
-      }
-
-      function changeLightbox(direction) {
-        currentIndex = (currentIndex + direction + galleryItems.length) % galleryItems.length;
-        openLightbox();
       }
     </script>
   </div>
