@@ -87,15 +87,69 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <p>Ukázky projektů – obrázky a videa.</p>
 
     <!-- Obrázky -->
-    <div style="overflow-x: auto; white-space: nowrap; padding-bottom: 1em;">
-      <img src="images/1np.jpg" style="height: 800px; margin-right: 1em;" />
-      <img src="images/pic01.jpg" style="height: 800px; margin-right: 1em;" />
-      <img src="images/pic02.jpg" style="height: 800px; margin-right: 1em;" />
-      <img src="images/pic03.jpg" style="height: 800px; margin-right: 1em;" />
-      <img src="images/pic01.jpg" style="height: 800px; margin-right: 1em;" />
-      <img src="images/pic02.jpg" style="height: 800px; margin-right: 1em;" />
-      <img src="images/pic03.jpg" style="height: 800px; margin-right: 1em;" />
-    </div>
+<style>
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+
+  .carousel-track img {
+    height: 200px;
+    margin-right: 1em;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    color: white;
+  }
+
+  .carousel-button.left {
+    left: 0.5em;
+  }
+
+  .carousel-button.right {
+    right: 0.5em;
+  }
+
+  .carousel-track img:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<div class="carousel-container">
+  <button class="carousel-button left" onclick="scrollCarousel(-1)">‹</button>
+  <div class="carousel-track" id="carouselTrack">
+    <img src="images/1np.jpg" alt="1np" />
+    <img src="images/pic01.jpg" />
+    <img src="images/pic02.jpg" />
+    <img src="images/pic03.jpg" />
+  </div>
+  <button class="carousel-button right" onclick="scrollCarousel(1)">›</button>
+</div>
+
+<script>
+  function scrollCarousel(direction) {
+    const track = document.getElementById('carouselTrack');
+    const scrollAmount = 220; // pixels
+    track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  }
+</script>
 
     <!-- Videa -->
     <div style="overflow-x: auto; white-space: nowrap;">
