@@ -87,66 +87,66 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <p>Ukázky projektů – obrázky a videa.</p>
 
     <style>
-      .carousel-container {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        margin-bottom: 2em;
-      }
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 2em;
+  }
 
-      .carousel-track {
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-      }
+  .carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
 
-      .carousel-track::-webkit-scrollbar {
-        display: none;
-      }
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
 
-      .carousel-track img,
-      .carousel-track video {
-        height: 200px;
-        margin-right: 1em;
-        flex-shrink: 0;
-        transition: transform 0.3s ease;
-        border-radius: 0.5em;
-      }
+  .carousel-track img,
+  .carousel-track video {
+    height: 200px;
+    margin-right: 1em;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    border-radius: 0.5em;
+  }
 
-      .carousel-track img:hover,
-      .carousel-track video:hover {
-        transform: scale(1.5);
-        z-index: 5;
-      }
+  .carousel-track img:hover,
+  .carousel-track video:hover {
+    transform: scale(2);
+    z-index: 10;
+  }
 
-      .carousel-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2em;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 2;
-        color: white;
-        padding: 0 0.25em;
-      }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+    padding: 0 0.25em;
+  }
 
-      .carousel-button.left {
-        left: 0;
-      }
+  .carousel-button.left {
+    left: -64px; /* ← posun šipky vlevo */
+  }
 
-      .carousel-button.right {
-        right: 0;
-      }
+  .carousel-button.right {
+    right: -64px; /* → posun šipky vpravo */
+  }
 
-      .portfolio-row-title {
-        margin: 1em 0 0.5em;
-        font-weight: bold;
-        font-size: 1.25em;
-      }
-    </style>
+  .portfolio-row-title {
+    margin: 1em 0 0.5em;
+    font-weight: bold;
+    font-size: 1.25em;
+  }
+</style>
 
     <!-- Obrázky - Řádek 1 -->
     <div class="portfolio-row-title">Vizualizace - interiéry</div>
