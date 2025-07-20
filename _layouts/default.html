@@ -100,7 +100,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         scroll-behavior: smooth;
         scrollbar-width: none;
         white-space: nowrap;
-        padding: 1em 1em 1em 1em;
+        padding: 1em;
         box-sizing: border-box;
       }
 
@@ -138,17 +138,8 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         padding: 0;
       }
 
-      .carousel-button.left {
-        left: -60px;
-      }
-
-      .carousel-button.right {
-        right: -60px;
-      }
-
-      .carousel-button svg {
-        display: block;
-      }
+      .carousel-button.left { left: -60px; }
+      .carousel-button.right { right: -60px; }
 
       .portfolio-row-title {
         margin: 1em 0 0.5em;
@@ -158,47 +149,57 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 
       /* Lightbox */
       .lightbox {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.9);
         display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.9);
         justify-content: center;
         align-items: center;
-        z-index: 2000;
+        z-index: 1000;
       }
 
-      .lightbox img {
+      .lightbox.active {
+        display: flex;
+      }
+
+      .lightbox-content {
         max-width: 90%;
         max-height: 90%;
+      }
+
+      .lightbox-content img,
+      .lightbox-content video {
+        max-width: 100%;
+        max-height: 100%;
         border-radius: 10px;
-        box-shadow: 0 0 20px rgba(255,255,255,0.3);
-        animation: fadeIn 0.3s;
       }
 
-      @keyframes fadeIn {
-        from { opacity: 0; transform: scale(0.95); }
-        to { opacity: 1; transform: scale(1); }
-      }
-
-      .lightbox-button {
+      .lightbox-close,
+      .lightbox-prev,
+      .lightbox-next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: none;
-        border: none;
         color: white;
-        font-size: 2rem;
+        font-size: 2em;
         cursor: pointer;
-        z-index: 2100;
+        user-select: none;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
       }
 
-      .lightbox-button.prev { left: 20px; }
-      .lightbox-button.next { right: 20px; }
-    </style>
+      .lightbox-close {
+        top: 20px;
+        right: 20px;
+        transform: none;
+      }
 
+      .lightbox-prev { left: 30px; }
+      .lightbox-next { right: 30px; }
+    </style>
+	  
     <!-- ŘÁDEK 1 -->
     <div class="portfolio-row-title">Vizualizace – interiéry</div>
     <div class="carousel-container">
@@ -277,11 +278,11 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       </button>
     </div>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox-button prev" onclick="changeImage(-1)">&#10094;</button>
-      <img src="" alt="Zvětšený obrázek">
-      <button class="lightbox-button next" onclick="changeImage(1)">&#10095;</button>
+   <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">×</span>
+      <span class="lightbox-prev" onclick="changeLightbox(-1)">‹</span>
+      <div class="lightbox-content" id="lightboxContent"></div>
+      <span class="lightbox-next" onclick="changeLightbox(1)">›</span>
     </div>
 
     <script>
@@ -291,8 +292,6 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         if (!items.length) return;
 
         const trackRect = track.getBoundingClientRect();
-        const trackCenter = track.scrollLeft + trackRect.width / 2;
-
         let currentIndex = 0;
         let minDiff = Infinity;
 
@@ -314,34 +313,37 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         track.scrollTo({ left: scrollTo, behavior: 'smooth' });
       }
 
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = lightbox.querySelector('img');
-      let currentImages = [];
+      // Lightbox
+      let galleryItems = [];
       let currentIndex = 0;
 
-      document.querySelectorAll('.carousel-track img').forEach(img => {
-        img.addEventListener('click', (e) => {
-          currentImages = Array.from(e.target.closest('.carousel-track').querySelectorAll('img'));
-          currentIndex = currentImages.indexOf(e.target);
+      document.querySelectorAll('.carousel-track img, .carousel-track video').forEach((item, index) => {
+        item.addEventListener('click', () => {
+          galleryItems = Array.from(document.querySelectorAll('.carousel-track img, .carousel-track video'));
+          currentIndex = galleryItems.indexOf(item);
           openLightbox();
         });
       });
 
       function openLightbox() {
-        lightboxImg.src = currentImages[currentIndex].src;
-        lightbox.style.display = 'flex';
+        const lightbox = document.getElementById('lightbox');
+        const content = document.getElementById('lightboxContent');
+        const currentItem = galleryItems[currentIndex].cloneNode(true);
+        currentItem.removeAttribute('height');
+        currentItem.removeAttribute('width');
+        content.innerHTML = '';
+        content.appendChild(currentItem);
+        lightbox.classList.add('active');
       }
 
-      function changeImage(direction) {
-        currentIndex = (currentIndex + direction + currentImages.length) % currentImages.length;
-        lightboxImg.src = currentImages[currentIndex].src;
+      function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
       }
 
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-          lightbox.style.display = 'none';
-        }
-      });
+      function changeLightbox(direction) {
+        currentIndex = (currentIndex + direction + galleryItems.length) % galleryItems.length;
+        openLightbox();
+      }
     </script>
   </div>
 </section>
