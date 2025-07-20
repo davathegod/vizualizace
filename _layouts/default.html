@@ -86,49 +86,59 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <h2>Portfolio</h2>
     <p>Ukázky projektů – obrázky a videa.</p>
 
-  <style>
+ <style>
 .carousel-track img,
 .carousel-track video {
-  width: 880px;        /* původně 220px => 400 % */
+  width: 880px;        /* zvětšeno trvale */
   height: auto;
   margin-right: 1em;
   flex-shrink: 0;
   border-radius: 0.5em;
   object-fit: cover;
-  transform: none !important;   /* zakáže jakýkoliv scale efekt */
-  transition: none;             /* zruší animaci */
+  transform: none !important;
+  transition: none;
+  z-index: 1;          /* nižší než šipky */
+  position: relative;
 }
 
-/* Odstranit hover efekt */
 .carousel-track img:hover,
 .carousel-track video:hover {
   transform: none !important;
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2em;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 3;
-    color: white;
-    padding: 0 0.25em;
-  }
+}
 
-  .carousel-button.left {
-    left: -45px;
-  }
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 2em;
+}
 
-  .carousel-button.right {
-    right: -45px;
-  }
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 5;           /* vyšší než obrázky */
+  color: white;
+  padding: 0 0.25em;
+}
 
-  .portfolio-row-title {
-    margin: 1em 0 0.5em;
-    font-weight: bold;
-    font-size: 1.25em;
-  }
+.carousel-button.left {
+  left: -55px;          /* posunuto o dalších 10 px doleva */
+}
+
+.carousel-button.right {
+  right: -55px;         /* posunuto o dalších 10 px doprava */
+}
+
+.portfolio-row-title {
+  margin: 1em 0 0.5em;
+  font-weight: bold;
+  font-size: 1.25em;
+}
 </style>
 
     <!-- Obrázky - Řádek 1 -->
