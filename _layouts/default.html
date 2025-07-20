@@ -110,8 +110,14 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         height: 200px;
         margin-right: 1em;
         flex-shrink: 0;
-        transition: transform 0.2s ease;
+        transition: transform 0.3s ease;
         border-radius: 0.5em;
+      }
+
+      .carousel-track img:hover,
+      .carousel-track video:hover {
+        transform: scale(1.5);
+        z-index: 5;
       }
 
       .carousel-button {
@@ -135,36 +141,61 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         right: 0;
       }
 
-      .carousel-track img:hover,
-      .carousel-track video:hover {
-        transform: scale(1.1);
+      .portfolio-row-title {
+        margin: 1em 0 0.5em;
+        font-weight: bold;
+        font-size: 1.25em;
       }
     </style>
 
-    <!-- Obrázky Carousel -->
+    <!-- Obrázky - Řádek 1 -->
+    <div class="portfolio-row-title">Vizualizace - interiéry</div>
     <div class="carousel-container">
-      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImages', -1)">‹</button>
-      <div class="carousel-track" id="carouselTrackImages">
+      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg1', -1)">‹</button>
+      <div class="carousel-track" id="carouselTrackImg1">
         <img src="images/1np.jpg" alt="1np" />
-        <img src="images/pic01.jpg" alt="" />
-        <img src="images/pic02.jpg" alt="" />
-        <img src="images/pic03.jpg" alt="" />
-        <img src="images/1np.jpg" alt="1np again" />
-        <img src="images/pic02.jpg" alt="" />
+        <img src="images/pic01.jpg" />
+        <img src="images/pic02.jpg" />
+        <img src="images/pic03.jpg" />
       </div>
-      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImages', 1)">›</button>
+      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg1', 1)">›</button>
     </div>
 
-    <!-- Videa Carousel -->
+    <!-- Obrázky - Řádek 2 -->
+    <div class="portfolio-row-title">Vizualizace - exteriéry</div>
     <div class="carousel-container">
-      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVideos', -1)">‹</button>
-      <div class="carousel-track" id="carouselTrackVideos">
+      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg2', -1)">‹</button>
+      <div class="carousel-track" id="carouselTrackImg2">
+        <img src="images/pic01.jpg" />
+        <img src="images/pic03.jpg" />
+        <img src="images/1np.jpg" />
+        <img src="images/pic02.jpg" />
+      </div>
+      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg2', 1)">›</button>
+    </div>
+
+    <!-- Videa - Řádek 3 -->
+    <div class="portfolio-row-title">Animace a průchody</div>
+    <div class="carousel-container">
+      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid1', -1)">‹</button>
+      <div class="carousel-track" id="carouselTrackVid1">
         <video src="images/vid1.mp4" controls loop muted></video>
+        <video src="images/vid2.mp4" controls loop muted></video>
+        <video src="images/vid1.mp4" controls loop muted></video>
+      </div>
+      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid1', 1)">›</button>
+    </div>
+
+    <!-- Videa - Řádek 4 -->
+    <div class="portfolio-row-title">Zachycení detailů</div>
+    <div class="carousel-container">
+      <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid2', -1)">‹</button>
+      <div class="carousel-track" id="carouselTrackVid2">
         <video src="images/vid2.mp4" controls loop muted></video>
         <video src="images/vid1.mp4" controls loop muted></video>
         <video src="images/vid2.mp4" controls loop muted></video>
       </div>
-      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVideos', 1)">›</button>
+      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid2', 1)">›</button>
     </div>
 
     <script>
@@ -176,6 +207,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     </script>
   </div>
 </section>
+
 
 <section class="wrapper style2 spotlights" id="one">
 <section>
