@@ -86,80 +86,83 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <h2>Portfolio</h2>
     <p>Ukázky projektů – obrázky a videa.</p>
 
- <style>
-.carousel-track img,
-.carousel-track video {
-  width: 880px;        /* zvětšeno trvale */
-  height: auto;
-  margin-right: 1em;
-  flex-shrink: 0;
-  border-radius: 0.5em;
-  object-fit: cover;
-  transform: none !important;
-  transition: none;
-  z-index: 1;          /* nižší než šipky */
-  position: relative;
-}
+    <style>
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 2em;
+      }
 
-.carousel-track img:hover,
-.carousel-track video:hover {
-  transform: none !important;
-}
+      .carousel-track {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
 
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 2em;
-}
+      .carousel-track::-webkit-scrollbar {
+        display: none;
+      }
 
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2em;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 5;           /* vyšší než obrázky */
-  color: white;
-  padding: 0 0.25em;
-}
+      .carousel-track img,
+      .carousel-track video {
+        width: 880px;
+        height: auto;
+        margin-right: 1em;
+        flex-shrink: 0;
+        border-radius: 0.5em;
+        object-fit: cover;
+      }
 
-.carousel-button.left {
-  left: -55px;          /* posunuto o dalších 10 px doleva */
-}
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2em;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 5;
+        color: white;
+        padding: 0 0.25em;
+      }
 
-.carousel-button.right {
-  right: -55px;         /* posunuto o dalších 10 px doprava */
-}
+      .carousel-button.left {
+        left: -65px; /* posunuto o 10px víc než předtím */
+      }
 
-.portfolio-row-title {
-  margin: 1em 0 0.5em;
-  font-weight: bold;
-  font-size: 1.25em;
-}
-</style>
+      .carousel-button.right {
+        right: -65px;
+      }
 
-    <!-- Obrázky - Řádek 1 -->
-    <div class="portfolio-row-title">Vizualizace - interiéry</div>
+      .portfolio-row-title {
+        margin: 1em 0 0.5em;
+        font-weight: bold;
+        font-size: 1.25em;
+      }
+    </style>
+
+    <!-- Carousel řádky -->
+
+    <!-- Řádek 1 -->
+    <div class="portfolio-row-title">Vizualizace – interiéry</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg1', -1)">‹</button>
       <div class="carousel-track" id="carouselTrackImg1">
-        <img src="images/1np.jpg" alt="1np" />
+        <img src="images/1np.jpg" />
         <img src="images/pic01.jpg" />
         <img src="images/pic02.jpg" />
         <img src="images/pic03.jpg" />
-	           <img src="images/pic01.jpg" />
+        <img src="images/pic01.jpg" />
         <img src="images/pic03.jpg" />
-        <img src="images/1np.jpg" />
-        <img src="images/pic02.jpg" />
       </div>
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg1', 1)">›</button>
     </div>
 
-    <!-- Obrázky - Řádek 2 -->
-    <div class="portfolio-row-title">Vizualizace - exteriéry</div>
+    <!-- Řádek 2 -->
+    <div class="portfolio-row-title">Vizualizace – exteriéry</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg2', -1)">‹</button>
       <div class="carousel-track" id="carouselTrackImg2">
@@ -167,15 +170,13 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         <img src="images/pic03.jpg" />
         <img src="images/1np.jpg" />
         <img src="images/pic02.jpg" />
-	           <img src="images/pic01.jpg" />
+        <img src="images/pic01.jpg" />
         <img src="images/pic03.jpg" />
-        <img src="images/1np.jpg" />
-        <img src="images/pic02.jpg" />
       </div>
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg2', 1)">›</button>
     </div>
 
-    <!-- Videa - Řádek 3 -->
+    <!-- Řádek 3 -->
     <div class="portfolio-row-title">Animace a průchody</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid1', -1)">‹</button>
@@ -183,14 +184,12 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         <video src="images/vid1.mp4" controls loop muted></video>
         <video src="images/vid2.mp4" controls loop muted></video>
         <video src="images/vid1.mp4" controls loop muted></video>
-	              <video src="images/vid2.mp4" controls loop muted></video>
-        <video src="images/vid1.mp4" controls loop muted></video>
         <video src="images/vid2.mp4" controls loop muted></video>
       </div>
-      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImages', 1)">›</button>
+      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid1', 1)">›</button>
     </div>
 
-    <!-- Videa - Řádek 4 -->
+    <!-- Řádek 4 -->
     <div class="portfolio-row-title">Zachycení detailů</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid2', -1)">‹</button>
@@ -198,20 +197,19 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         <video src="images/vid2.mp4" controls loop muted></video>
         <video src="images/vid1.mp4" controls loop muted></video>
         <video src="images/vid2.mp4" controls loop muted></video>
-	              <video src="images/vid2.mp4" controls loop muted></video>
         <video src="images/vid1.mp4" controls loop muted></video>
-        <video src="images/vid2.mp4" controls loop muted></video>
-  </div>
-  <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVideos', 1)">›</button>
-</div>
+      </div>
+      <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid2', 1)">›</button>
+    </div>
 
-<script>
-  function scrollCarousel(id, direction) {
-    const track = document.getElementById(id);
-    const scrollAmount = 240;
-    track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
-  }
-</script>
+    <script>
+      function scrollCarousel(id, direction) {
+        const track = document.getElementById(id);
+        const scrollAmount = 920; // jedno médium + mezera
+        track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+      }
+    </script>
+
   </div>
 </section>
 
