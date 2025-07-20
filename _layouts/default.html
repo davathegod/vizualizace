@@ -86,7 +86,6 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <h2>Portfolio</h2>
     <p>Ukázky projektů – obrázky a videa.</p>
 
-    <!-- Obrázky -->
     <style>
       .carousel-container {
         position: relative;
@@ -97,8 +96,13 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 
       .carousel-track {
         display: flex;
-        transition: transform 0.3s ease;
-        will-change: transform;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .carousel-track::-webkit-scrollbar {
+        display: none;
       }
 
       .carousel-track img,
@@ -118,21 +122,22 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         background: none;
         border: none;
         cursor: pointer;
-        z-index: 1;
+        z-index: 2;
         color: white;
+        padding: 0 0.25em;
       }
 
       .carousel-button.left {
-        left: 0.2em;
+        left: 0;
       }
 
       .carousel-button.right {
-        right: 0.2em;
+        right: 0;
       }
 
       .carousel-track img:hover,
       .carousel-track video:hover {
-        transform: scale(3);
+        transform: scale(1.1);
       }
     </style>
 
@@ -141,13 +146,11 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImages', -1)">‹</button>
       <div class="carousel-track" id="carouselTrackImages">
         <img src="images/1np.jpg" alt="1np" />
-        <img src="images/pic01.jpg" />
-        <img src="images/pic02.jpg" />
-        <img src="images/pic03.jpg" />
-	         <img src="images/1np.jpg" alt="1np" />
-        <img src="images/pic01.jpg" />
-        <img src="images/pic02.jpg" />
-        <img src="images/pic03.jpg" />
+        <img src="images/pic01.jpg" alt="" />
+        <img src="images/pic02.jpg" alt="" />
+        <img src="images/pic03.jpg" alt="" />
+        <img src="images/1np.jpg" alt="1np again" />
+        <img src="images/pic02.jpg" alt="" />
       </div>
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImages', 1)">›</button>
     </div>
@@ -160,10 +163,6 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
         <video src="images/vid2.mp4" controls loop muted></video>
         <video src="images/vid1.mp4" controls loop muted></video>
         <video src="images/vid2.mp4" controls loop muted></video>
-	              <video src="images/vid1.mp4" controls loop muted></video>
-        <video src="images/vid2.mp4" controls loop muted></video>
-        <video src="images/vid1.mp4" controls loop muted></video>
-        <video src="images/vid2.mp4" controls loop muted></video>
       </div>
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVideos', 1)">›</button>
     </div>
@@ -171,8 +170,8 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <script>
       function scrollCarousel(id, direction) {
         const track = document.getElementById(id);
-        const scrollAmount = 240; // pixel
-        track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+        const scrollAmount = 250;
+        track.scrollLeft += scrollAmount * direction;
       }
     </script>
   </div>
