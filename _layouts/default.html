@@ -86,10 +86,10 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <h2>Portfolio</h2>
     <p>Ukázky projektů – obrázky a videa.</p>
 
-  <style>
+ <style>
   .carousel-container {
     position: relative;
-    overflow: visible; /* důležité, aby šipky mimo kontejner byly viditelné */
+    overflow: visible;
     width: 100%;
     margin-bottom: 2em;
   }
@@ -102,7 +102,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     scrollbar-width: none;
     -ms-overflow-style: none;
     white-space: nowrap;
-    padding: 1em 3.5em; /* prostor na šipky */
+    padding: 1em 3em;
     box-sizing: border-box;
   }
 
@@ -126,32 +126,33 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2.2em;
-    width: 55px;
-    height: 55px;
-    background-color: #ffffffcc; /* světlé poloprůhledné pozadí */
-    color: #333;
-    border: 2px solid #888;
-    border-radius: 50%;
+    font-size: 2em;
+    width: 40px;
+    height: 90px; /* Větší výška */
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #222;
+    border: none;
+    border-radius: 20px; /* Kapsle efekt */
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
     transition: background 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
   }
 
   .carousel-button:hover {
-    background-color: #333;
+    background-color: #111;
     color: #fff;
   }
 
   .carousel-button.left {
-    left: -60px; /* posun mimo carousel */
+    left: -40px; /* posun vlevo */
   }
 
   .carousel-button.right {
-    right: -60px; /* posun mimo carousel */
+    right: -40px; /* posun vpravo */
   }
 
   .portfolio-row-title {
