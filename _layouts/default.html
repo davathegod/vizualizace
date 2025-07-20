@@ -108,7 +108,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
 
       .carousel-track img,
       .carousel-track video {
-        width: 880px;
+        width: 650px;
         height: auto;
         margin-right: 1em;
         flex-shrink: 0;
@@ -130,11 +130,11 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       }
 
       .carousel-button.left {
-        left: -65px; /* posunuto o 10px víc než předtím */
+        left: -58px;
       }
 
       .carousel-button.right {
-        right: -65px;
+        right: -58px;
       }
 
       .portfolio-row-title {
@@ -144,9 +144,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       }
     </style>
 
-    <!-- Carousel řádky -->
-
-    <!-- Řádek 1 -->
+    <!-- Vizualizace – interiéry -->
     <div class="portfolio-row-title">Vizualizace – interiéry</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg1', -1)">‹</button>
@@ -161,7 +159,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg1', 1)">›</button>
     </div>
 
-    <!-- Řádek 2 -->
+    <!-- Vizualizace – exteriéry -->
     <div class="portfolio-row-title">Vizualizace – exteriéry</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackImg2', -1)">‹</button>
@@ -176,7 +174,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackImg2', 1)">›</button>
     </div>
 
-    <!-- Řádek 3 -->
+    <!-- Animace a průchody -->
     <div class="portfolio-row-title">Animace a průchody</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid1', -1)">‹</button>
@@ -189,7 +187,7 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
       <button class="carousel-button right" onclick="scrollCarousel('carouselTrackVid1', 1)">›</button>
     </div>
 
-    <!-- Řádek 4 -->
+    <!-- Zachycení detailů -->
     <div class="portfolio-row-title">Zachycení detailů</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarousel('carouselTrackVid2', -1)">‹</button>
@@ -205,13 +203,13 @@ zpracujeme co si budete přát - buď pro stavební povolení nebo jenom vizuali
     <script>
       function scrollCarousel(id, direction) {
         const track = document.getElementById(id);
-        const scrollAmount = 920; // jedno médium + mezera
+        const scrollAmount = 660; // šířka obrázku + mezera
         track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
       }
     </script>
-
   </div>
 </section>
+
 
 
 <section class="wrapper style2 spotlights" id="one">
