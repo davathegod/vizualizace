@@ -3930,3 +3930,17 @@ input, select, textarea {
   flex-direction: column;
   justify-content: flex-start;
 }
+#services, #portfolio, #about, #contact {
+    background-image: url('images/back2.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#services h1, #services h2, #services h3, #services p,
+#portfolio h1, #portfolio h2, #portfolio h3, #portfolio p,
+#about h1, #about h2, #about h3, #about p,
+#contact h1, #contact h2, #contact h3, #contact p {
+    color: black !important;
+}
