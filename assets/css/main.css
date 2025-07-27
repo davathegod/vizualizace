@@ -3930,12 +3930,3 @@ input, select, textarea {
   flex-direction: column;
   justify-content: flex-start;
 }
-
-#two {
-  background-image: url('/images/back1.jpg'); /* uprav cestu podle skutečného umístění */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* volitelné: efekt paralaxy */
-  color: white; /* lepší čitelnost textu */
-}
