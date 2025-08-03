@@ -14,18 +14,34 @@
 <noscript><link href="assets/css/noscript.css" rel="stylesheet"/></noscript>
 	 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body class="is-preload"style="background-image: url('images/back6.avif'); 
-             background-size: cover; 
-             background-position: center; 
-             background-attachment: fixed; 
-             background-repeat: no-repeat;">
+<body class="is-preload" style="
+  margin: 0;
+  background-image: url('images/back6.avif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+">
+
 <!-- Sidebar -->
-<section id="sidebar"
-  style="height: 120vh; display: flex; flex-direction: column; justify-content: space-between; 
-         padding-right: 1em; margin-right: 0em;
-         background-image: url('images/back1.jpg'); background-size: cover;
-         background-position: center; background-repeat: no-repeat;">
-  <div class="inner" style="padding: 4em 2em 2em 0em; overflow: hidden;">
+<section id="sidebar" style="
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4em 2em 2em 2em;
+  background-image: url('images/back1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1000;
+">
+  <div class="inner" style="overflow: hidden;">
     <!-- Logo -->
     <div style="padding: 0 0 1em 0; text-align: left;">
       <a href="#hero" style="display: inline-block; width: 115px; height: 115px;">
@@ -41,35 +57,37 @@
     </div>
 
     <!-- Navigace -->
-    <nav style="text-align: left; padding-left: 1em; margin-top: 0em;">
-      <ul style="font-size: 1.25em; padding-left: 0;">
+    <nav style="text-align: left; padding-left: 1em; margin-top: 0;">
+      <ul style="font-size: 1.25em; padding-left: 0; list-style: none;">
         <li><a data-aos="zoom-in" href="#two" style="color: black;">naše služby</a></li>
         <li><a data-aos="zoom-in" href="#four" style="color: black;">ceník</a></li>
         <li><a data-aos="zoom-in" href="#one" style="color: black;">o nás</a></li>
-	<li><a data-aos="zoom-in" href="#three" style="color: black;">kontakt</a></li>     
+        <li><a data-aos="zoom-in" href="#three" style="color: black;">kontakt</a></li>
         <li><a data-aos="zoom-in" href="#portfolio" style="color: black;">portfolio</a></li>
-        
       </ul>
     </nav>
   </div>
 </section>
 
 <!-- Wrapper -->
-<div id="wrapper">
-  <section class="wrapper" id="hero"
-    style="background-image: url('assets/images/background.jpg'); 
-           background-size: cover; 
-           background-position: center; 
-           background-repeat: no-repeat;
-           background-attachment: fixed;
-           height: 100vh; 
-           display: flex; 
-           flex-direction: column; 
-           justify-content: center; 
-           align-items: center; 
-           text-align: center; 
-           color: white;">
-           
+<div id="wrapper" style="
+  margin-left: 300px;
+  width: calc(100% - 300px);
+  background-image: url('assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+">
+  <section class="wrapper" id="hero" style="
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  ">
     <h1 data-aos="zoom-in">PROvizualizace</h1>
     <p data-aos="zoom-in">3D vizualizace, animace, návrhy interiérů a exteriérů</p>
   </section>
@@ -558,6 +576,7 @@ style="background: transparent; color: black;">
 </script>
 </body>
 </html>
+
 
 
 
