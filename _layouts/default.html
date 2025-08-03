@@ -6,6 +6,7 @@
   <title>PROvizualizace</title>
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 	
@@ -69,17 +70,17 @@ zpracujeme co si budete přát nebo za příplatek podle vzdálenosti můžeme z
 <h3 style="color: black;">vizualizace interierů/exterierů</h3>
 <p>animace, pohledy a detaily místností s nábytkem a osvětlením</p>
 </section>
-<section>
+<section data-aos="fade-left">
 <span class="icon solid major fa-lock"></span>
 <h3 style="color: black;">3D model</h3>
 <p>k vizualizacím více místností zdarma 3D model </p>
 </section>
-<section>
+<section data-aos="fade-right">
 <span class="icon solid major fa-cog"></span>
 <h3 style="color: black;">zpracování Vašich návrhů</h3>
 <p>společně zkusíme vybrat nejideájlněší nábytek, dekor atd.</p>
 </section>
-<section>
+<section data-aos="fade-left">
 <span class="icon solid major fa-desktop"></span>
 <h3 style="color: black;">zaměření objektu</h3>
 <p>dojedeme k Vám a sami si naměříme daný objekt k vizualizaci</p>
@@ -530,8 +531,17 @@ zpracujeme co si budete přát nebo za příplatek podle vzdálenosti můžeme z
         });
     });
 </script>
+	<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // délka animace v ms
+    once: true // animace se spustí jen jednou
+  });
+</script>
 </body>
 </html>
+
 
 
 
