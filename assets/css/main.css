@@ -3931,54 +3931,59 @@ input, select, textarea {
   justify-content: flex-start;
 }
 
-/* Obecné styly pro desktop/tablet */
-#sidebar {
-  width: 300px;
-  position: fixed;
-}
-
 @media screen and (max-width: 768px) {
   #sidebar {
-    position: relative; /* zruší fixní pozici */
+    position: static; /* Bude se hýbat se stránkou */
     width: 100%;
     height: auto;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1em;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1em 1em 0.5em 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   #sidebar .inner {
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
+  }
+
+  #sidebar .inner > div {
+    margin-bottom: 1em;
+    text-align: center;
   }
 
   #sidebar nav ul {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
     padding: 0;
-    margin: 1em 0 0 0;
+    margin: 0;
     list-style: none;
   }
 
-  #sidebar nav ul li {
-    margin: 0;
+  #sidebar nav ul li a {
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
   }
 
   #wrapper {
-    margin-left: 0; /* zruší prostor pro sidebar */
-    padding-top: 2em;
+    margin-left: 0;
+    padding: 1em;
+  }
+
+  section {
+    padding: 1em 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
-
 
 
