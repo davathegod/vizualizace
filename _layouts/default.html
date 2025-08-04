@@ -33,7 +33,7 @@
 
     <!-- Navigace -->
     <nav style="text-align: left; padding-left: 1em; margin-top: 1em;">
-      <ul style="font-size: 1.2em; padding-left: 0;">
+      <ul style="font-size: 1.25em; padding-left: 0;">
          <li><a data-aos="zoom-in" href="#two" style="color: white;">naše služby</a></li>
         <li><a data-aos="zoom-in" href="#four" style="color: white;">ceník</a></li>
         <li><a data-aos="zoom-in" href="#one" style="color: white;">o nás</a></li>
@@ -52,8 +52,8 @@
     <section id="hero" class="wrapper" style="background-image: url('images/background.jpg'); background-size: cover;
         background-position: center; height: 100vh; display: flex; flex-direction: column;
         justify-content: center; align-items: center; text-align: center; color: white;">
-      <h1>PROvizualizace</h1>
-      <p>3D vizualizace, animace, návrhy interiérů a exteriérů</p>
+      <h1 data-aos="zoom-in">PROvizualizace</h1>
+      <p data-aos="zoom-in" style="font-size: 1.2em>3D vizualizace, animace, návrhy interiérů a exteriérů</p>
     </section>
 
 
@@ -537,11 +537,13 @@ zpracujeme co si budete přát nebo za příplatek podle vzdálenosti můžeme z
 <script>
   AOS.init({
     duration: 1000, // trvání animace v ms
-    once: false      // animace se spustí jen jednou
+    once: false  
+    mirror: true   // animace se spustí jen jednou
   });
 </script>
 </body>
 </html>
+
 
 
 
