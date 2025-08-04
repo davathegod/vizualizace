@@ -3938,7 +3938,7 @@ input, select, textarea {
 }
 
 /* Verze pro mobily (do 768px šířky) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
   #sidebar {
     position: relative;
     width: 100%;
@@ -3955,7 +3955,7 @@ input, select, textarea {
 
   #wrapper {
     margin-left: 0;
-    padding-top: 1em;
+    padding-top: 4em;
   }
 
   section#wrapper section {
@@ -3974,3 +3974,4 @@ input, select, textarea {
     font-size: 1.1em;
   }
 }
+
