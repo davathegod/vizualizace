@@ -3987,6 +3987,7 @@ input, select, textarea {
 
   /* Mobilní horní lišta */
   #mobile-header {
+	  display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -4044,6 +4045,7 @@ input, select, textarea {
     padding-top: 50px;
   }
 }
+
 
 
 
