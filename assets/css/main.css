@@ -3978,30 +3978,39 @@ input, select, textarea {
 
 /* Zobrazit jen na mobilech */
 @media screen and (max-width: 736px) {
+  /* Skrytí sidebaru na mobilu */
+  #sidebar,
+  #sidebar > .inner {
+    display: none !important;
+    background: none !important;
+  }
+
+  /* Mobilní horní lišta */
   #mobile-header {
-    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 9999;
   }
 
   .mobile-bar {
-    height: 100px;
+    height: 50px;
     background-color: #1f1f1f;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 10;
   }
 
   .mobile-bar .logo img {
-    height: 60px; /* přizpůsob si podle potřeby */
+    height: 35px;
     object-fit: contain;
   }
 
   #mobile-menu-toggle {
-    font-size: 2em;
+    font-size: 1.8em;
     background: none;
     border: none;
     color: white;
@@ -4027,13 +4036,14 @@ input, select, textarea {
   #mobile-menu ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
+  }
+
+  /* Posun obsahu pod lištu */
+  body {
+    padding-top: 50px;
   }
 }
-@media screen and (max-width: 736px) {
-  #sidebar {
-    display: none !important;
-  }
-}
+
 
 
