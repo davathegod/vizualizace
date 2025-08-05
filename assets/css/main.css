@@ -4064,6 +4064,22 @@ input, select, textarea {
 
 
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* zabrání horizontálnímu scrollu, pokud něco přečnívá */
+}
+
+section,
+header,
+main,
+footer {
+  width: 100%;
+}
+
+
+
 
 
 
