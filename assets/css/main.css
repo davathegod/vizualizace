@@ -4006,19 +4006,19 @@ input, select, textarea {
   }
 
   .mobile-bar .logo img {
-    height: 50px;
+    height: 75px;
     object-fit: contain;
   }
 	 .mobile-bar .logo span {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: white;
-    margin-left: 0.5em;
+    margin-left: 1em;
   }
 
  #mobile-menu-toggle {
   font-size: 20px;     /* zmenši velikost ikony (např. 28px místo 1.8em) */
-  width: 50px;         /* nastav celkovou šířku tlačítka */
-  height: 30px;        /* výška pro zarovnání */
+  width: 60px;         /* nastav celkovou šířku tlačítka */
+  height: 37px;        /* výška pro zarovnání */
   background: none;
   border: none;
   color: white;
@@ -4057,6 +4057,7 @@ input, select, textarea {
     padding-top: 50px; /* stejná nebo větší než výška .mobile-bar */
   }
 }
+
 
 
 
