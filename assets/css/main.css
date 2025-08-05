@@ -4015,10 +4015,13 @@ input, select, textarea {
     margin-left: 1em;
   }
 
- #mobile-menu-toggle {
-  font-size: 20px;     /* zmenši velikost ikony (např. 28px místo 1.8em) */
-  width: 60px;         /* nastav celkovou šířku tlačítka */
-  height: 37px;        /* výška pro zarovnání */
+#mobile-menu-toggle {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   color: white;
@@ -4057,6 +4060,7 @@ input, select, textarea {
     padding-top: 50px; /* stejná nebo větší než výška .mobile-bar */
   }
 }
+
 
 
 
