@@ -4016,9 +4016,9 @@ input, select, textarea {
   }
 
  #mobile-menu-toggle {
-  font-size: 28px;     /* zmenši velikost ikony (např. 28px místo 1.8em) */
-  width: 75px;         /* nastav celkovou šířku tlačítka */
-  height: 50px;        /* výška pro zarovnání */
+  font-size: 20px;     /* zmenši velikost ikony (např. 28px místo 1.8em) */
+  width: 50px;         /* nastav celkovou šířku tlačítka */
+  height: 30px;        /* výška pro zarovnání */
   background: none;
   border: none;
   color: white;
@@ -4057,6 +4057,7 @@ input, select, textarea {
     padding-top: 50px; /* stejná nebo větší než výška .mobile-bar */
   }
 }
+
 
 
 
