@@ -4008,6 +4008,7 @@ input, select, textarea {
   .mobile-bar .logo img {
     height: 75px;
     object-fit: contain;
+	  margin-bottom: 1.5em;
   }
 	 .mobile-bar .logo span {
     font-size: 1.5em;
@@ -4085,6 +4086,7 @@ footer {
   margin: 0 auto;
   padding: 0 1em; /* volitelné vnitřní odsazení */
 }
+
 
 
 
