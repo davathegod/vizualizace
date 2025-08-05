@@ -4015,13 +4015,15 @@ input, select, textarea {
     margin-left: 0.5em;
   }
 
-  #mobile-menu-toggle {
-    font-size: 1.5em;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
+ #mobile-menu-toggle {
+  font-size: 28px;     /* zmenši velikost ikony (např. 28px místo 1.8em) */
+  width: 75px;         /* nastav celkovou šířku tlačítka */
+  height: 50px;        /* výška pro zarovnání */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
   #mobile-menu {
     display: none;
@@ -4048,6 +4050,11 @@ input, select, textarea {
   /* Posun obsahu pod lištu */
   body {
     padding-top: 50px;
+  }
+}
+@media screen and (max-width: 736px) {
+  body {
+    padding-top: 50px; /* stejná nebo větší než výška .mobile-bar */
   }
 }
 
