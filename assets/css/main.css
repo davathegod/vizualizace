@@ -3979,15 +3979,25 @@ input, select, textarea {
 /* Zobrazit jen na mobilech */
 @media screen and (max-width: 736px) {
   #mobile-header {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-bar {
+    height: 100px;
+    background-color: #1f1f1f;
     display: flex;
-    flex-direction: column;
-    background: #1f1f1f;
-    padding: 1em;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+  }
+
+  .mobile-bar .logo img {
+    height: 60px; /* přizpůsob si podle potřeby */
+    object-fit: contain;
   }
 
   #mobile-menu-toggle {
@@ -3999,13 +4009,15 @@ input, select, textarea {
   }
 
   #mobile-menu {
-    display: none; /* Zobrazí se po kliknutí na toggle */
-    margin-top: 1em;
+    display: none;
+    background: #1f1f1f;
+    padding: 1em;
   }
 
   #mobile-menu ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
   #mobile-menu ul li {
@@ -4023,4 +4035,5 @@ input, select, textarea {
     display: none !important;
   }
 }
+
 
