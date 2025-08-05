@@ -3996,8 +3996,8 @@ input, select, textarea {
   }
 
   .mobile-bar {
-    height: 50px;
-    background-color: #1f1f1f;
+    height: 75px;
+    background-color: #0d0c0d;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -4011,7 +4011,7 @@ input, select, textarea {
   }
 
   #mobile-menu-toggle {
-    font-size: 1.8em;
+    font-size: 1.5em;
     background: none;
     border: none;
     color: white;
@@ -4045,6 +4045,7 @@ input, select, textarea {
     padding-top: 50px;
   }
 }
+
 
 
 
