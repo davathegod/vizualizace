@@ -4006,8 +4006,13 @@ input, select, textarea {
   }
 
   .mobile-bar .logo img {
-    height: 35px;
+    height: 50px;
     object-fit: contain;
+  }
+	 .mobile-bar .logo span {
+    font-size: 1.2em;
+    color: white;
+    margin-left: 0.5em;
   }
 
   #mobile-menu-toggle {
@@ -4045,6 +4050,7 @@ input, select, textarea {
     padding-top: 50px;
   }
 }
+
 
 
 
