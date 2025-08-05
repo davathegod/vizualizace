@@ -4018,3 +4018,9 @@ input, select, textarea {
     font-size: 1.2em;
   }
 }
+@media screen and (max-width: 736px) {
+  #sidebar {
+    display: none !important;
+  }
+}
+
