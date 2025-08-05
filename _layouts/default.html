@@ -12,19 +12,22 @@
 	
 <body class="is-preload" style=" background-image: url('images/back6.avif'); background-size: cover; scroll-behavior: smooth; background-attachment: fixed; background-position: center; background-repeat: no-repeat;">
 
-	<!-- Tlačítko hamburgeru -->
-<button id="mobile-menu-toggle">☰</button>
+<!-- Mobilní hlavička (zobrazí se jen na mobilu) -->
+<header id="mobile-header">
+  <!-- Tlačítko hamburgeru -->
+  <button id="mobile-menu-toggle">☰</button>
 
-<!-- Mobilní menu -->
-<nav id="mobile-menu">
-  <ul>
-    <li><a href="#two">naše služby</a></li>
-    <li><a href="#four">ceník</a></li>
-    <li><a href="#one">o nás</a></li>
-    <li><a href="#three">kontakt</a></li>
-    <li><a href="#portfolio">portfolio</a></li>
-  </ul>
-</nav>
+  <!-- Mobilní menu -->
+  <nav id="mobile-menu">
+    <ul>
+      <li><a href="#two">naše služby</a></li>
+      <li><a href="#four">ceník</a></li>
+      <li><a href="#one">o nás</a></li>
+      <li><a href="#three">kontakt</a></li>
+      <li><a href="#portfolio">portfolio</a></li>
+    </ul>
+  </nav>
+</header>
 	<!-- Sidebar -->
 <section id="sidebar"
   style="height: 100vh; width: 400px; display: flex; flex-direction: column; justify-content: space-between; 
@@ -555,11 +558,13 @@ zpracujeme co si budete přát nebo za příplatek podle vzdálenosti můžeme z
     });
 </script>
 	<script>
-  const toggle = document.getElementById("mobile-menu-toggle");
-  const menu = document.getElementById("mobile-menu");
-
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
+  document.getElementById("mobile-menu-toggle").addEventListener("click", function () {
+    var menu = document.getElementById("mobile-menu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
   });
 </script>
 	<!-- AOS JS -->
@@ -574,6 +579,7 @@ zpracujeme co si budete přát nebo za příplatek podle vzdálenosti můžeme z
 </script>
 </body>
 </html>
+
 
 
 
