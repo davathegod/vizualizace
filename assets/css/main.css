@@ -3946,8 +3946,8 @@ input, select, textarea {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 2px;
-  background-color: #b74e91; /* stejná barva jako v sidebaru */
+  height: 4px; /* zvýšeno z 2px na 4px */
+  background-color: #b74e91;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -3955,4 +3955,19 @@ input, select, textarea {
 
 #hero a:hover::after {
   transform: scaleX(1);
+}
+
+/* Odstranění teček z odkazů pokud jsou ve <ul> */
+#hero ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#hero ul li {
+  margin-bottom: 0.5em;
+}
+
+html {
+  scroll-behavior: smooth;
 }
