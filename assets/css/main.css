@@ -4009,7 +4009,7 @@ input, select, textarea {
     height: 75px;
     object-fit: contain;
 	  margin-bottom: 1.5em;
-	    transform: translateX(-25px);
+	   margin-left: -25px;
   }
 	.logo-link {
   display: inline-block;
@@ -4136,6 +4136,7 @@ footer {
   padding: 0;
   margin: 0;
 }
+
 
 
 
