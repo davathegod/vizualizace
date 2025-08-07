@@ -4007,7 +4007,7 @@ input, select, textarea {
   .mobile-bar .logo img {
     height: 75px;
     object-fit: contain;
-	 padding: 1.5 1.5 1.5 1.5em;
+	 padding: 0 1.5 0 1.5em;
 	  
 	   
   }
@@ -4136,6 +4136,7 @@ footer {
   padding: 0;
   margin: 0;
 }
+
 
 
 
