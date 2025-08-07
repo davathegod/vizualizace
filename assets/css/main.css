@@ -3997,24 +3997,24 @@ input, select, textarea {
 
   .mobile-bar {
     height: 75px;
-    background-color: #0d0c0d;
+    background-color: #000000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
   .mobile-bar .logo img {
-    height: 75px;
+    height: 43px;
     object-fit: contain;
-	  margin-bottom: 1.5em;
-	   margin-left: -25px;
+	 padding: 1.5 1.5 1.5 1.5em;
+	  
+	   
   }
 	.logo-link {
   display: inline-block;
-  width: 75px;
-  height: 75px;
+  width: 43px;
+  height: 43px;
   overflow: hidden;
   line-height: 0; /* odstraní bílou mezeru pod obrázkem */
 }
@@ -4136,6 +4136,7 @@ footer {
   padding: 0;
   margin: 0;
 }
+
 
 
 
