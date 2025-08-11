@@ -4042,7 +4042,10 @@ input, select, textarea {
   border: none;
   cursor: pointer;
   position: relative;   /* kvůli proužkům */
-  z-index: 10000;       /* aby bylo nad menu */
+  z-index: 10000;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;/* aby bylo nad menu */
 }
 
 /* Proužky hamburgeru */
@@ -4182,6 +4185,7 @@ footer {
 
 #portfolio {
   display: none;
+
 
 
 
