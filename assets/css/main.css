@@ -3978,13 +3978,17 @@ input, select, textarea {
 
 /* Zobrazit jen na mobilech */
 @media screen and (max-width: 736px) {
-  /* Skrytí sidebaru na mobilu */
-  #sidebar,
   #sidebar > .inner {
-    display: none !important;
-    background: none !important;
+    width: 100vw;          /* 100 % šířky viewportu */
+    max-width: 100vw;      /* omez max šířku */
+    position: fixed;       /* můžeš i fixed, aby byla nahoře */
+    top: 0;                /* zarovná nahoře */
+    left: 0;               /* zarovná vlevo */
+    height: auto;          /* nebo nastav výšku, jak potřebuješ */
+    z-index: 10000;        /* aby byla nad ostatním obsahem */
+    background-color: #000; /* třeba pozadí jako lišta */
   }
-	
+	}
   /* Mobilní horní lišta */
   #mobile-header {
 	  display: block;
@@ -4176,6 +4180,7 @@ footer {
 
 #portfolio {
   display: none;
+
 
 
 
