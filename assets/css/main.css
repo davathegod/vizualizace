@@ -4033,44 +4033,44 @@ input, select, textarea {
 
 /* Styl tlačítka hamburgeru */
 #mobile-menu-toggle {
-  width: 100px;
+  width: 90px;
   height: 60px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
   position: relative;
   z-index: 10000;
   box-sizing: border-box;
+  gap: 6px; /* vzdálenost mezi proužky */
 }
 
-/* Proužky hamburgeru - všechny centrované */
-#mobile-menu-toggle::before,
-#mobile-menu-toggle::after,
-#mobile-menu-toggle span {
-  content: '';
-  position: absolute;
+#mobile-menu-toggle .bar {
   width: 30px;
   height: 3px;
   background-color: white;
-  transition: 0.3s ease;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 2px; /* zaoblení, lepší vzhled */
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-#mobile-menu-toggle::before {
-  top: 18px;
+/* Aktivní stav - animace na křížek */
+#mobile-menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
 }
 
-#mobile-menu-toggle span {
-  top: 28px;
+#mobile-menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
 }
 
-#mobile-menu-toggle::after {
-  top: 38px;
+#mobile-menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
 }
 
 /* Aktivní stav - transformace na křížek */
@@ -4189,14 +4189,7 @@ footer {
 #portfolio {
   display: none;
 
-#mobile-menu-toggle::before {
-  filter: none !important;
-}
 
-#mobile-menu-toggle::before {
-  background-color: red !important;
-  opacity: 1 !important;
-}
 
 
 
