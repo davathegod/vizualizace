@@ -4134,7 +4134,7 @@ footer {
 .inner,
 .container,
 .wrapper {
-  max-width: 100% !important;
+  max-width: 120% !important;
   margin: 0 auto;
   padding: 0 1em; /* volitelné vnitřní odsazení */
 }
@@ -4176,6 +4176,7 @@ footer {
 
 #portfolio {
   display: none;
+
 
 
 
