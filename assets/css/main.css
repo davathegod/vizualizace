@@ -4033,7 +4033,7 @@ input, select, textarea {
 
 /* Styl tlačítka hamburgeru */
 #mobile-menu-toggle {
-  width: 80px;
+  width: 100px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -4193,6 +4193,7 @@ footer {
 #mobile-menu {
   display: block !important;
 }
+
 
 
 
