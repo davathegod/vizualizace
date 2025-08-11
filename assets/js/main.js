@@ -194,18 +194,20 @@ $(document).ready(function() {
     $('#mobile-menu').slideToggle();
   });
 
-  // Zavření menu při kliknutí mimo menu a button
-  $(document).on('click', function(e) {
-    if (!$(e.target).closest('#mobile-menu, #mobile-menu-toggle').length) {
-      if ($('#mobile-menu').is(':visible')) {
-        $('#mobile-menu').slideUp();
-        $('#mobile-menu-toggle').removeClass('active');
-      }
-    }
-  });
-});
+
 
 })(jQuery);
+	
+document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+  this.classList.toggle('active');
+
+  const menu = document.getElementById('mobile-menu');
+  if (menu.style.display === 'block') {
+    menu.style.display = 'none';
+  } else {
+    menu.style.display = 'block';
+  }
+});
 
 
 
