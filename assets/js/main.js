@@ -199,8 +199,9 @@ $(document).ready(function() {
 })(jQuery);
 	
 document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-  this.classList.toggle('active');
-
+  this.classList.toggle('active');  // Přepne třídu active na buttonu
+  
+  // Volitelně můžeš tady přidat otevírání / zavírání menu, např.:
   const menu = document.getElementById('mobile-menu');
   if (menu.style.display === 'block') {
     menu.style.display = 'none';
