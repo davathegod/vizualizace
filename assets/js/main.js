@@ -114,7 +114,7 @@
 		}
 
 	// Scrolly.
-	$('.ignore-scrolly').removeClass('scrolly');
+
 		$('.scrolly').scrolly({
 			speed: 1000,
 			offset: function() {
@@ -130,16 +130,6 @@
 			}
 		});
 
-	$('.scrolly').not('.ignore-scrolly').scrolly({
-    speed: 1000,
-    offset: function() {
-        if (breakpoints.active('<=large')
-        && !breakpoints.active('<=small')
-        && $sidebar.length > 0)
-            return $sidebar.height();
-        return 0;
-    }
-});
 
 	// Spotlights.
 		$('.spotlights > section')
@@ -201,4 +191,5 @@
 
 
 })(jQuery);
+
 
