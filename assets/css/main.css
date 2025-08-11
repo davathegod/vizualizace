@@ -4045,7 +4045,7 @@ input, select, textarea {
   position: relative;
   z-index: 10000;
   box-sizing: border-box;
-  gap: 6px; /* vzdálenost mezi proužky */
+  gap: 6px;
 }
 
 #mobile-menu-toggle .bar {
@@ -4056,7 +4056,6 @@ input, select, textarea {
   transition: all 0.3s ease;
 }
 
-/* Aktivní stav - animace na křížek */
 #mobile-menu-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg);
   position: relative;
@@ -4071,25 +4070,6 @@ input, select, textarea {
   transform: rotate(-45deg);
   position: relative;
   top: -8px;
-}
-
-/* Aktivní stav - transformace na křížek */
-#mobile-menu-toggle.active::before {
-  top: 28px;
-  transform: translateX(-50%) rotate(45deg);
-	background-color: white; /* aby zůstal bílý */
-  opacity: 1 !important;
-}
-
-#mobile-menu-toggle.active span {
-  opacity: 0;
-}
-
-#mobile-menu-toggle.active::after {
-  top: 28px;
-  transform: translateX(-50%) rotate(-45deg);
-  background-color: white; /* aby zůstal bílý */
-  opacity: 1 !important;
 }
 
 
@@ -4188,6 +4168,7 @@ footer {
 
 #portfolio {
   display: none;
+
 
 
 
