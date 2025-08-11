@@ -4031,17 +4031,60 @@ input, select, textarea {
     margin-left: 1em;
   }
 
+/* Styl tlačítka hamburgeru */
 #mobile-menu-toggle {
-  font-size: 20px;
-  width: 20px;
-  height: 40px;
+  width: 60px;          /* šířka tlačítka */
+  height: 60px;         /* výška tlačítka */
   display: flex;
   align-items: center;
   justify-content: center;
   background: none;
   border: none;
-  color: white;
   cursor: pointer;
+  position: relative;   /* kvůli proužkům */
+  z-index: 10000;       /* aby bylo nad menu */
+}
+
+/* Proužky hamburgeru */
+#mobile-menu-toggle::before,
+#mobile-menu-toggle::after,
+#mobile-menu-toggle span {
+  content: '';
+  position: absolute;
+  width: 30px;          /* délka proužku */
+  height: 3px;          /* tloušťka proužku */
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+/* Horní proužek */
+#mobile-menu-toggle::before {
+  top: 18px;
+}
+
+/* Prostřední proužek */
+#mobile-menu-toggle span {
+  top: 28px;
+}
+
+/* Spodní proužek */
+#mobile-menu-toggle::after {
+  top: 38px;
+}
+
+/* Animace na křížek při otevření */
+#mobile-menu-toggle.active::before {
+  transform: rotate(45deg);
+  top: 28px;
+}
+
+#mobile-menu-toggle.active span {
+  opacity: 0;
+}
+
+#mobile-menu-toggle.active::after {
+  transform: rotate(-45deg);
+  top: 28px;
 }
 
   #mobile-menu {
@@ -4139,6 +4182,7 @@ footer {
 
 #portfolio {
   display: none;
+
 
 
 
