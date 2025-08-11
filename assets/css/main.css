@@ -4033,7 +4033,7 @@ input, select, textarea {
 
 #mobile-menu-toggle {
   font-size: 20px;
-  width: 40px;
+  width: 20px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -4139,6 +4139,7 @@ footer {
 
 #portfolio {
   display: none;
+
 
 
 
