@@ -114,18 +114,20 @@
 		}
 
 	// Scrolly.
+		$('.scrolly').scrolly({
+			speed: 1000,
+			offset: function() {
 
-$('.scrolly').not('.ignore-scrolly').scrolly({
-    speed: 1000,
-    offset: function() {
-        if (breakpoints.active('<=large')
-        && !breakpoints.active('<=small')
-        && $sidebar.length > 0)
-            return $sidebar.height();
-        return 0;
-    }
-});
+				// If <=large, >small, and sidebar is present, use its height as the offset.
+					if (breakpoints.active('<=large')
+					&&	!breakpoints.active('<=small')
+					&&	$sidebar.length > 0)
+						return $sidebar.height();
 
+				return 0;
+
+			}
+		});
 
 	// Spotlights.
 		$('.spotlights > section')
@@ -185,36 +187,4 @@ $('.scrolly').not('.ignore-scrolly').scrolly({
 				}
 			});
 
-$(document).ready(function() {
-  $('#mobile-menu-toggle').off('click').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    $(this).toggleClass('active');
-    $('#mobile-menu').slideToggle();
-  });
-
-
-
 })(jQuery);
-	
-document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-  this.classList.toggle('active');  // Přepne třídu active na buttonu
-  
-  // Volitelně můžeš tady přidat otevírání / zavírání menu, např.:
-  const menu = document.getElementById('mobile-menu');
-  if (menu.style.display === 'block') {
-    menu.style.display = 'none';
-  } else {
-    menu.style.display = 'block';
-  }
-});
-
-
-
-
-
-
-
-
-
