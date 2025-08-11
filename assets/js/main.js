@@ -184,12 +184,9 @@ $('.scrolly').not('.ignore-scrolly').scrolly({
 
 				}
 			});
-$('#mobile-menu-toggle').on('click', function() {
-  $(this).toggleClass('active');
-  $('#mobile-menu').slideToggle();
-});
 
 })(jQuery);
+
 
 
 
