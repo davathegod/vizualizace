@@ -4033,7 +4033,7 @@ input, select, textarea {
 
 /* Styl tlačítka hamburgeru */
 #mobile-menu-toggle {
-  width: 60px;
+  width: 80px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -4077,6 +4077,8 @@ input, select, textarea {
 #mobile-menu-toggle.active::before {
   top: 28px;
   transform: translateX(-50%) rotate(45deg);
+	background-color: white; /* aby zůstal bílý */
+  opacity: 1;
 }
 
 #mobile-menu-toggle.active span {
@@ -4086,6 +4088,8 @@ input, select, textarea {
 #mobile-menu-toggle.active::after {
   top: 28px;
   transform: translateX(-50%) rotate(-45deg);
+  background-color: white; /* aby zůstal bílý */
+  opacity: 1;
 }
 
 
@@ -4189,6 +4193,7 @@ footer {
 #mobile-menu {
   display: block !important;
 }
+
 
 
 
