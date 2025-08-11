@@ -185,7 +185,19 @@ $('.scrolly').not('.ignore-scrolly').scrolly({
 				}
 			});
 
+$(document).ready(function() {
+  $('#mobile-menu-toggle').on('click', function(event) {
+    event.preventDefault();
+    console.log('Toggle kliknuto, aktivní stav před:', $(this).hasClass('active'));
+    $(this).toggleClass('active');
+    $('#mobile-menu').slideToggle(function() {
+      console.log('Menu viditelnost po toggle:', $('#mobile-menu').is(':visible'));
+    });
+  });
+});
+
 })(jQuery);
+
 
 
 
