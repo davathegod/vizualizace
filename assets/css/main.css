@@ -3984,6 +3984,7 @@ input, select, textarea {
     display: none !important;
     background: none !important;
   }
+	
   /* Mobilní horní lišta */
   #mobile-header {
 	  display: block;
@@ -4175,43 +4176,4 @@ footer {
 
 #portfolio {
   display: none;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
