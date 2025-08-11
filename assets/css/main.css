@@ -4186,6 +4186,9 @@ footer {
   display: none;
 
 
+#mobile-menu {
+  display: block !important;
+}
 
 
 
