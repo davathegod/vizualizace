@@ -602,8 +602,9 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
   });
 </script>
 <script>
-	$(document).ready(function() {
-  $('#mobile-menu-toggle').on('click', function() {
+$(document).ready(function() {
+  $('#mobile-menu-toggle').on('click', function(event) {
+    event.preventDefault(); // zabrání defaultní akci tlačítka
     $(this).toggleClass('active');
     $('#mobile-menu').slideToggle();
   });
@@ -611,6 +612,7 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
 </script>
 </body>
 </html>
+
 
 
 
