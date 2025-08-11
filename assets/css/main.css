@@ -4189,6 +4189,9 @@ footer {
 #portfolio {
   display: none;
 
+#mobile-menu-toggle::after {
+  filter: none !important;
+}
 
 
 
