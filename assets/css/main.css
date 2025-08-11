@@ -4189,10 +4189,14 @@ footer {
 #portfolio {
   display: none;
 
-#mobile-menu-toggle::after {
+#mobile-menu-toggle::before {
   filter: none !important;
 }
 
+#mobile-menu-toggle::before {
+  background-color: red !important;
+  opacity: 1 !important;
+}
 
 
 
