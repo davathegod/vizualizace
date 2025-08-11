@@ -114,6 +114,7 @@
 		}
 
 	// Scrolly.
+	$('.ignore-scrolly').removeClass('scrolly');
 		$('.scrolly').scrolly({
 			speed: 1000,
 			offset: function() {
@@ -200,3 +201,4 @@
 
 
 })(jQuery);
+
