@@ -4043,12 +4043,10 @@ input, select, textarea {
   cursor: pointer;
   position: relative;
   z-index: 10000;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+ box-sizing: border-box;
 }
 
-/* Všechny tři proužky mají stejnou délku a tloušťku */
+/* Proužky hamburgeru */
 #mobile-menu-toggle::before,
 #mobile-menu-toggle::after,
 #mobile-menu-toggle span {
@@ -4057,29 +4055,24 @@ input, select, textarea {
   width: 30px;
   height: 3px;
   background-color: white;
-  left: 50%;
-  transform: translateX(-50%);
   transition: 0.3s ease;
 }
 
-/* Horní proužek */
 #mobile-menu-toggle::before {
   top: 18px;
 }
 
-/* Prostřední proužek */
 #mobile-menu-toggle span {
   top: 28px;
 }
 
-/* Spodní proužek */
 #mobile-menu-toggle::after {
   top: 38px;
 }
 
-/* Animace: křížek */
+/* Animace po kliknutí */
 #mobile-menu-toggle.active::before {
-  transform: translateX(-50%) rotate(45deg);
+  transform: rotate(45deg);
   top: 28px;
 }
 
@@ -4088,7 +4081,7 @@ input, select, textarea {
 }
 
 #mobile-menu-toggle.active::after {
-  transform: translateX(-50%) rotate(-45deg);
+  transform: rotate(-45deg);
   top: 28px;
 }
 
@@ -4187,6 +4180,7 @@ footer {
 
 #portfolio {
   display: none;
+
 
 
 
