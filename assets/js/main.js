@@ -186,12 +186,8 @@ $('.scrolly').not('.ignore-scrolly').scrolly({
 			});
 
 })(jQuery);
-$(document).ready(function() {
-  $('#mobile-menu-toggle').on('click', function() {
-    $(this).toggleClass('active');
-    $('#mobile-menu').slideToggle();
-  });
-});
+
+
 
 
 
