@@ -4078,7 +4078,7 @@ input, select, textarea {
   top: 28px;
   transform: translateX(-50%) rotate(45deg);
 	background-color: white; /* aby zůstal bílý */
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 #mobile-menu-toggle.active span {
@@ -4089,7 +4089,7 @@ input, select, textarea {
   top: 28px;
   transform: translateX(-50%) rotate(-45deg);
   background-color: white; /* aby zůstal bílý */
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 
@@ -4190,9 +4190,8 @@ footer {
   display: none;
 
 
-#mobile-menu {
-  display: block !important;
-}
+
+
 
 
 
