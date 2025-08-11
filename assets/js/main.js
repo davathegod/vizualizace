@@ -186,17 +186,27 @@ $('.scrolly').not('.ignore-scrolly').scrolly({
 			});
 
 $(document).ready(function() {
-  $('#mobile-menu-toggle').on('click', function(event) {
-    event.preventDefault();
-    console.log('Toggle kliknuto, aktivní stav před:', $(this).hasClass('active'));
+  $('#mobile-menu-toggle').off('click').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
     $(this).toggleClass('active');
-    $('#mobile-menu').slideToggle(function() {
-      console.log('Menu viditelnost po toggle:', $('#mobile-menu').is(':visible'));
-    });
+    $('#mobile-menu').slideToggle();
+  });
+
+  // Zavření menu při kliknutí mimo menu a button
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('#mobile-menu, #mobile-menu-toggle').length) {
+      if ($('#mobile-menu').is(':visible')) {
+        $('#mobile-menu').slideUp();
+        $('#mobile-menu-toggle').removeClass('active');
+      }
+    }
   });
 });
 
 })(jQuery);
+
 
 
 
