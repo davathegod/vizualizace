@@ -601,20 +601,10 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
     mirror: true   
   });
 </script>
-<script>
-$(document).ready(function() {
-  $('#mobile-menu-toggle').on('click', function(event) {
-    event.preventDefault();
-    console.log('Toggle kliknuto, aktivní stav před:', $(this).hasClass('active'));
-    $(this).toggleClass('active');
-    $('#mobile-menu').slideToggle(function() {
-      console.log('Menu viditelnost po toggle:', $('#mobile-menu').is(':visible'));
-    });
-  });
-});
-</script>
+
 </body>
 </html>
+
 
 
 
