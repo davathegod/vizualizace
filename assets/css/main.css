@@ -3984,7 +3984,7 @@ input, select, textarea {
     display: none !important;
     background: none !important;
   }
-	
+
   /* Mobilní horní lišta */
   #mobile-header {
 	  display: block;
@@ -4031,55 +4031,18 @@ input, select, textarea {
     margin-left: 1em;
   }
 
-/* Styl tlačítka hamburgeru */
 #mobile-menu-toggle {
-  width: 90px;
-  height: 60px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background: none;
   border: none;
+  color: white;
   cursor: pointer;
-  position: relative;
-  z-index: 10000;
-  box-sizing: border-box;
-  gap: 6px;
 }
-
-#mobile-menu-toggle .bar {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-#mobile-menu-toggle.active .bar:nth-child(1) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 30px;
-  margin: 0;
-  transform-origin: center center;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-#mobile-menu-toggle.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-#mobile-menu-toggle.active .bar:nth-child(3) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 30px;
-  margin: 0;
-  transform-origin: center center;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
 
   #mobile-menu {
     display: none;
@@ -4134,7 +4097,7 @@ footer {
 .inner,
 .container,
 .wrapper {
-  max-width: 120% !important;
+  max-width: 100% !important;
   margin: 0 auto;
   padding: 0 1em; /* volitelné vnitřní odsazení */
 }
