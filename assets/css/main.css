@@ -3991,7 +3991,6 @@ input, select, textarea {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 9999;
   }
 
@@ -4073,13 +4072,6 @@ input, select, textarea {
 }
 
 
-@media screen and (max-width: 736px) {
-  body, #wrapper {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-}
 
 
 #mobile-menu a {
@@ -4117,6 +4109,7 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
 
 
