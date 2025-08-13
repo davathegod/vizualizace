@@ -3993,6 +3993,8 @@ input, select, textarea {
     left: 0;
     z-index: 9999;
 	width:100%;
+	  margin-right: 80px
+
   }
 
   .mobile-bar {
@@ -4047,6 +4049,7 @@ input, select, textarea {
   z-index: 10000;
   box-sizing: border-box;
   gap: 6px;
+	padding-right:85px
 }
 
 #mobile-menu-toggle .bar {
@@ -4148,5 +4151,6 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
 
