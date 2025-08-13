@@ -4045,11 +4045,12 @@ input, select, textarea {
   border: none;
   cursor: pointer;
   position: relative;
+  left: 50px;
   z-index: 10000;
   box-sizing: border-box;
   gap: 6px;
-  padding-right:100px;
-  margin-right: 150;
+  padding-right:150px;
+  margin-right: 250px;
 }
 
 #mobile-menu-toggle .bar {
@@ -4158,6 +4159,7 @@ input, select, textarea {
     width: calc(100% + 100px);
   }
 }
+
 
 
 
