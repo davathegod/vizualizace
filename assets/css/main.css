@@ -3991,7 +3991,7 @@ input, select, textarea {
     position: fixed;
     top: 0;
     left: 0;
-    width: auto;
+    width: 100%;
     z-index: 9999;
   }
 
@@ -4145,6 +4145,7 @@ input, select, textarea {
     overflow-x: hidden;
   }
 }
+
 
 
 
