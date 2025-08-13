@@ -4125,7 +4125,7 @@ input, select, textarea {
   .inner,
   .container,
   .wrapper {
-    max-width: 736px; 
+    max-width: 80%; 
     margin: 0 auto;
     
     box-sizing: border-box;
@@ -4169,6 +4169,7 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
 
 
