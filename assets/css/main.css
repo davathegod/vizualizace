@@ -3987,16 +3987,17 @@ input, select, textarea {
 	
   /* Mobilní horní lišta */
   #mobile-header {
-	  display: block;
+	  display: inherit;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
-	 padding-right: 4.5em;
+	width:100%;
   }
 
   .mobile-bar {
     height: 75px;
+	  width:100%;
     background-color: #000000;
     display: flex;
     align-items: center;
@@ -4033,8 +4034,8 @@ input, select, textarea {
 
 /* Styl tlačítka hamburgeru */
 #mobile-menu-toggle {
-  width: 90px;
-  height: 60px;
+  width: 70px;
+  height: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4147,4 +4148,5 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
