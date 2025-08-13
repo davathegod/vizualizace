@@ -187,25 +187,24 @@
 				}
 			});
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("mobile-menu-toggle");
-    const menu = document.getElementById("mobile-menu");
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("mobile-menu-toggle");
+  const menu = document.getElementById("mobile-menu");
 
-    toggle.addEventListener("click", function () {
-      const isOpen = menu.style.display === "block";
-      menu.style.display = isOpen ? "none" : "block";
-    });
-
-    // Zavřít menu po kliknutí na libovolný odkaz v menu
-    const links = menu.querySelectorAll("a");
-    links.forEach(link => {
-      link.addEventListener("click", function () {
-        menu.style.display = "none";
-      });
-    });
+  toggle.addEventListener("click", function () {
+    const isOpen = getComputedStyle(menu).display === "block";
+    menu.style.display = isOpen ? "none" : "block";
   });
 
+  const links = menu.querySelectorAll("a");
+  links.forEach(link => {
+    link.addEventListener("click", function () {
+      menu.style.display = "none";
+    });
+  });
+});
 })(jQuery);
+
 
 
 
