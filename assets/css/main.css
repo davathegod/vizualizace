@@ -4035,7 +4035,7 @@ input, select, textarea {
 
 /* Styl tlačítka hamburgeru */
 #mobile-menu-toggle {
-  width: 70px;
+  width: 50px;
   height: 40px;
   display: flex;
   flex-direction: column;
@@ -4152,6 +4152,7 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
 
 
