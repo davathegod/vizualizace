@@ -3991,7 +3991,7 @@ input, select, textarea {
     position: fixed;
     top: 0;
     left: 0;
-    width: 370px;
+    width: auto;
     z-index: 9999;
   }
 
@@ -4067,12 +4067,12 @@ input, select, textarea {
 
   /* Posun obsahu pod lištu */
   body {
-    padding-top: 50px;
+    padding-top: 75px;
   }
 }
 @media screen and (max-width: 736px) {
   body {
-    padding-top: 50px; /* stejná nebo větší než výška .mobile-bar */
+    padding-top: 75px; /* stejná nebo větší než výška .mobile-bar */
   }
 }
 
@@ -4130,6 +4130,7 @@ input, select, textarea {
     width: 100% !important;
   }
 }
+
 
 
 
