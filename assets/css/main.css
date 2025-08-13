@@ -4125,7 +4125,7 @@ input, select, textarea {
   .inner,
   .container,
   .wrapper {
-    max-width: 90%; /* menší než celá obrazovka */
+    max-width: 100%; /* menší než celá obrazovka */
     margin: 0 auto;
     padding: 0 0.5em; /* menší vnitřní odsazení */
     box-sizing: border-box;
@@ -4169,5 +4169,6 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
 
