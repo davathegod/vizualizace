@@ -186,7 +186,7 @@
 
 				}
 			});
-<script>
+
 document.addEventListener("DOMContentLoaded", function() {
   const toggle = document.getElementById("mobile-menu-toggle");
   const menu = document.getElementById("mobile-menu"); // tvůj postranní panel nebo menu
@@ -205,8 +205,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
-</script>
+
 })(jQuery);
+
 
 
 
