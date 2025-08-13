@@ -4065,14 +4065,6 @@ input, select, textarea {
     font-size: 1.1em;
   }
 
-  /* Posun obsahu pod lištu */
-  body {
-    padding-top: 75px;
-	  width: 736px;
-  }
-	#wrapper {
-	  width: 736px;
-  }
 }
 @media screen and (max-width: 736px) {
   body {
@@ -4081,7 +4073,13 @@ input, select, textarea {
 }
 
 
-
+@media screen and (max-width: 736px) {
+  body, #wrapper {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
 
 
 #mobile-menu a {
@@ -4119,6 +4117,7 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
 
 
