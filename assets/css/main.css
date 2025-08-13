@@ -3992,7 +3992,7 @@ input, select, textarea {
     top: 0;
     left: 0;
     z-index: 9999;
-	 padding-right: 5em;
+	 padding-right: 4.5em;
   }
 
   .mobile-bar {
@@ -4033,15 +4033,16 @@ input, select, textarea {
 
 #mobile-menu-toggle {
   font-size: 20px;
-  width: 70px ; max-width: 70px ;
+  width: 70px !important ;
   height: 50px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   background: none;
   box-sizing: border-box !important;
   color: white;
   cursor: pointer;
+	overflow: hidden;
 }
   #mobile-menu {
     display: none;
@@ -4110,6 +4111,7 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
 
 
