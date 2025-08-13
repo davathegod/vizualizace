@@ -4033,13 +4033,13 @@ input, select, textarea {
 
 #mobile-menu-toggle {
   font-size: 20px;
-  width: 70px;
+  width: 70px !important;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: none;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   color: white;
   cursor: pointer;
 }
@@ -4077,30 +4077,6 @@ input, select, textarea {
 }
 
 
-
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; /* zabrání horizontálnímu scrollu, pokud něco přečnívá */
-}
-
-section,
-header,
-main,
-footer {
-  width: 100%;
-}
-
-.inner,
-.container,
-.wrapper {
-  max-width: 100% 
-  margin: 0 auto;
-  padding: 0 1em; /* volitelné vnitřní odsazení */
-}
 
 
 
@@ -4154,6 +4130,7 @@ footer {
     width: 100% !important;
   }
 }
+
 
 
 
