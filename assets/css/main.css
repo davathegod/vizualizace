@@ -4117,26 +4117,19 @@ input, select, textarea {
 
 
 
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* zabrání horizontálnímu scrollu, pokud něco přečnívá */
-}
-
-section,
-header,
-main,
-footer {
-  width: 100%;
-}
-
-.inner,
-.container,
-.wrapper {
-  max-width: 100% !important;
-  margin: 0 auto;
-  padding: 0 1em; /* volitelné vnitřní odsazení */
+@media screen and (max-width: 736px) {
+  section,
+  header,
+  main,
+  footer,
+  .inner,
+  .container,
+  .wrapper {
+    max-width: 90%; /* menší než celá obrazovka */
+    margin: 0 auto;
+    padding: 0 0.5em; /* menší vnitřní odsazení */
+    box-sizing: border-box;
+  }
 }
 
 
@@ -4176,4 +4169,5 @@ footer {
 
 #portfolio {
   display: none;
+
 
