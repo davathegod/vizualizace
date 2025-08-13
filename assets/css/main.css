@@ -4153,6 +4153,11 @@ input, select, textarea {
 #portfolio {
   display: none;
 
+@media (max-width: 736px) {
+  .wrapper {
+    width: calc(100% + 100px);
+  }
+}
 
 
 
