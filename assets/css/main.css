@@ -4032,7 +4032,7 @@ input, select, textarea {
   }
 
 #mobile-menu-toggle {
-  font-size: 20px;
+  font-size: 18px;
   width: 70px !important ;
   height: 50px;
   display: inline-flex;
@@ -4111,25 +4111,3 @@ input, select, textarea {
 
 #portfolio {
   display: none;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
