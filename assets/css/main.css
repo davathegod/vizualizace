@@ -4049,7 +4049,7 @@ input, select, textarea {
   z-index: 10000;
   box-sizing: border-box;
   gap: 6px;
-  transform: translateX(-100px);
+  transform: translateX(-50px);
 }
 
 #mobile-menu-toggle .bar {
@@ -4154,7 +4154,23 @@ input, select, textarea {
 
 
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
+	@media screen and (max-width: 736px) {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+}
 
 
 
