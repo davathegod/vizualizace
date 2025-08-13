@@ -3987,11 +3987,11 @@ input, select, textarea {
 	
   /* Mobilní horní lišta */
   #mobile-header {
-	  display: block;
+	  display: flex;
     position: fixed;
     top: 0;
     left: 0;
-    width: 60%;
+    width: 370px;
     z-index: 9999;
   }
 
@@ -4130,6 +4130,7 @@ input, select, textarea {
     width: 100% !important;
   }
 }
+
 
 
 
