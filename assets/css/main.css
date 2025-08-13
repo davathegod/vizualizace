@@ -4140,15 +4140,18 @@ footer {
 #portfolio {
   display: none;
 
+
 @media screen and (max-width: 736px) {
-  /* Pouze obsah, ne pozadí */
-  .inner,
-  .container,
-  .wrapper {
-    max-width: 100% !important;
+  #wrapper {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
     width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  }
+
+  #wrapper > .inner {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
   }
 }
 
