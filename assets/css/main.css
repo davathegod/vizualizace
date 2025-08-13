@@ -4033,7 +4033,7 @@ input, select, textarea {
 
 #mobile-menu-toggle {
   font-size: 20px;
-  width: 70px !important;
+  width: 40px !important;
   height: 50px;
   display: flex;
   align-items: center;
@@ -4117,34 +4117,10 @@ input, select, textarea {
   display: none;
 
 
-@media screen and (max-width: 736px) {
-  #wrapper {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    width: 100% !important;
-  }
-
-  #wrapper > .inner {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    width: 100% !important;
-  }
-}
 
 
-@media screen and (max-width: 736px) {
-  body {
-    transform: scale(1.15);
-    transform-origin: top center; /* ať se zoomuje od horního okraje */
-  }
-}
 
 
-@media screen and (max-width: 736px) {
-  html, body {
-    overflow-x: hidden;
-  }
-}
 
 
 
