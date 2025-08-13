@@ -4048,7 +4048,8 @@ input, select, textarea {
   z-index: 10000;
   box-sizing: border-box;
   gap: 6px;
-	padding-right:200px
+  padding-right:100px;
+  margin-right: 95;
 }
 
 #mobile-menu-toggle .bar {
@@ -4108,7 +4109,7 @@ input, select, textarea {
 }
 @media screen and (max-width: 736px) {
   body {
-    padding-top: 100px; /* stejná nebo větší než výška .mobile-bar */
+    padding-top: 75px; /* stejná nebo větší než výška .mobile-bar */
   }
 }
 
@@ -4150,6 +4151,7 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
 
 
