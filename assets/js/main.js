@@ -186,8 +186,28 @@
 
 				}
 			});
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.getElementById("mobile-menu-toggle");
+  const menu = document.getElementById("mobile-menu"); // tvůj postranní panel nebo menu
 
+  toggle.addEventListener("click", function(e) {
+    e.stopPropagation(); // aby se hned nezavřelo
+    this.classList.toggle("active");
+    menu.classList.toggle("open"); // přepnutí menu
+  });
+
+  // volitelné zavření po kliknutí mimo menu
+  document.addEventListener("click", function(e) {
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+      toggle.classList.remove("active");
+      menu.classList.remove("open");
+    }
+  });
+});
+</script>
 })(jQuery);
+
 
 
 
