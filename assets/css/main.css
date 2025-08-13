@@ -3992,6 +3992,7 @@ input, select, textarea {
     top: 0;
     left: 0;
     z-index: 9999;
+	 padding-right: 5em;
   }
 
   .mobile-bar {
@@ -4109,6 +4110,7 @@ input, select, textarea {
 
 #portfolio {
   display: none;
+
 
 
 
