@@ -7,11 +7,10 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> 
-	<link rel="icon" type="image/webp" href="images/logfawi.webp">
 </head>
 
 	
-<body class="is-preload" style="background: transparent); background-size: cover; scroll-behavior: smooth; background-attachment: fixed; background-position: center; background-repeat: no-repeat;">
+<body class="is-preload" style="background-image: url('images/pexels.webp'); background-size: cover; scroll-behavior: smooth; background-attachment: fixed; background-position: center; background-repeat: no-repeat;">
 
 <!-- Mobilní hlavička (zobrazí se jen na mobilu) -->
 <header id="mobile-header">
@@ -31,7 +30,7 @@
   <nav id="mobile-menu">
     <ul>
       <li><a href="#two">naše služby</a></li>
-      
+      <li><a href="#four">ceník</a></li>
       <li><a href="#one">o nás</a></li>
       <li><a href="#three">kontakt</a></li>
       
@@ -44,25 +43,25 @@
          background-image: url('images/back4.webp'); background-size: cover;
          background-position: center; background-repeat: no-repeat;">
 
-  <div class="inner" style="text-align: left; padding: 0em 0em 0em 0em; ">
-    <!--  -->
-    <div style="padding: 4 0 0 0em; text-align: left; margin-top: 85px; margin-bottom: -30px">
-      <a href="#hero" style="display: inline-block; width: 130px; height: 130px" class="ignore-scrolly">
-        <img src="images/logfawi.webp" alt="Logo" style="width: 100%; height: 100%" />
+  <div class="inner" style="text-align: left; padding: 1em 0em 0em 0em; ">
+    <!-- Logo -->
+    <div style="padding: 0 0 1 4em; text-align: left;margin-left: -50px;margin-top: 20px">
+      <a href="#hero" style="display: inline-block; width: 200px; height: 200px" class="ignore-scrolly">
+        <img src="images/logo2.webp" alt="Logo" style="width: 100%; height: 100%" />
       </a>
     </div>
 
     <!-- Název -->
-    <div style="text-align: center; margin-top: 25px ">
+    <div style="text-align: center; padding: 0 3 3 0em ;margin-top: -55px">
 	 <a href="#hero" >
       <h1 style="font-size: 1.7em; margin: 0; color: white;">PROvizualizace</h1></a>
     </div>
 
     <!-- Navigace -->
-    <nav style="text-align: left; padding-left: 1em; margin-top: 35px ">
-      <ul style="font-size: 1.55em; padding-left: 0;" data-aos="zoom-in">
+    <nav style="text-align: left; padding-left: 0.5em; margin-top: 1em;">
+      <ul style="font-size: 1.45em; padding-left: 0;" data-aos="zoom-in">
          <li><a href="#two" style="color: white;">naše služby</a></li>
-        
+        <li><a href="#four" style="color: white;">ceník</a></li>
         <li><a href="#one" style="color: white;">o nás</a></li>
         <li><a href="#three" style="color: white;">kontakt</a></li>
    
@@ -72,7 +71,8 @@
     </div>
   </section>
 
-
+  <!-- Wrapper -->
+  <div id="wrapper" >
 
     <!-- Hero sekce s vlastním pozadím -->
     <section id="hero" class="wrapper" style="background-image: url('images/Image4_000.webp'); background-size: cover;font-size: 3em
@@ -90,17 +90,14 @@
 	    
     </section>
 
-  <!-- Wrapper -->
-  <div id="wrapper" style="background-image: url('pexels.webp')"
-	  
+
 	<!-- naše služby -->
 	
 <section class="wrapper style2 spotlights" id="two" style="background: transparent;color: black;">
-  <div class="inner" style="padding-left: 500px ">
+  <div class="inner">
 <h2 style="color: black; ">NAŠE SLUŽBY</h2>
-<p>Nabízíme zpracování projektové dokumentace k menším objektům a stavebním úpravám (pouze pasportizace)- tvorba výkresů, 3D modelů a architektonická vizualizace. Podle dodaných podkladů (šablony, náčrty, výkresy v PDF)
+<p>nabízíme zpracování projektové dokumentace k menším objektům a stavebním úpravám (pouze pasportizace)- tvorba výkresů, 3D modelů a architektonická vizualizace. Podle dodaných podkladů (šablony, náčrty, výkresy v PDF)
 zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu. </p>
-	  
 <div class="features">
 <section data-aos="fade-right">
 <span class="icon solid major fa-code"></span>
@@ -119,18 +116,18 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
 </section>
 <section data-aos="fade-left">
 <span class="icon solid major fa-desktop"></span>
-<h3 style="color: black;">zaměření objektu</h3>
-<p>pokud se jedná o stávající objekt, přijedeme a změříme</p>
+<h3 style="color: black;">pasportizace stavby</h3>
+<p>pouze k malým stavbám a stavebním úpravám</p>
 </section>
 </div>
-  </div>
+</div>
 </section>
 	
 	 <!-- Sekce ceník -->
 <section class="wrapper style2 spotlights" id="four" style="background: transparent; color: black;">
-  <div class="inner" style="padding-left: 500px">
+  <div class="inner">
     <h2 style=" color: black;">CENÍK</h2>
-	  <p> Ceník všech našich služeb. Cena je pouze orientační a může se změnit podle náročnosti (velikost, detaily atd.). </p>
+	  <p> ceník všech našich služeb. Cena je pouze orientační a může se změnit podle náročnosti (velikost, detaily atd.). </p>
     <div style="max-width: 400px; margin: 0 auto;">
 
       <div style="padding: 1em 0;" data-aos="fade-right">
@@ -170,10 +167,11 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
 
 <!-- o nás -->
 	
-<section class="wrapper style2 spotlights" id="one" style="background: transparent; color: black">
-	<div class="inner" style="padding-left: 500px">
+<section class="wrapper style2 spotlights" id="one" style="background: transparent; color: black;>
+<divf class="inner" > 
+	<div class="inner">
 	<h2 style="color: black;">O NÁS</h2>
-	<p>Jsme 2 studenti VUT fakulty stavební se zaměřením na pozemní stavby. Máme zkušenosti s projektováním, vizualizacema a naceňováním. Spolupracujeme s inženýry z praxe s letitou zkušeností pro záruku kvality.  <br>
+	<p>jsme 2 studenti VUT fakulty stavební se zaměřením na pozemní stavby. Máme zkušenosti s projektováním, vizualizacema a naceňováním. Spolupracujeme s inženýry z praxe s letitou zkušeností pro záruku kvality.  <br>
 	Od první zakázky se zdokonalujeme a každá další je pro nás výzvou, kterou se snažíme zpracovat v co nejlepší kvalitě.
 		</p>
  </div>
@@ -182,7 +180,7 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
 
  <!-- Sekce Kontakt -->
   <section class="wrapper style1 fade-up" id="three" style="background: transparent; color: black;">
-    <div class="inner" style="padding-left: 500px">
+    <div class="inner" >
       <h2 style="color: black;">KONTAKT</h2>
      
       <div class="split style1">
@@ -239,9 +237,9 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
             </li>
             <li>
               <h3 style="color: black;">telefon</h3>
-              <span>+420 722 411 430 </span>  <br>
+              <span>722 411 430 - Dvořák David</span>  <br>
 				
-              <span>774 664 537 </span>    
+              <span>774 664 537 - Koten Adam</span>    
             </li>
 			  
             <li>
@@ -261,7 +259,7 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
 
 	<!-- portfolio schovano v CSS-->
 <section class="wrapper style2 spotlights" id="portfolio" style="background: transparent; color: black;">
-  <div class="inner" style="padding-left: 500px">
+  <div class="inner">
     <h2 style="color: black;" >PORTFOLIO</h2>
     <p style="color: black; font-size: 1.25em;" data-aos="fade-right">Ukázky našich projektů – vizualizace, výkresy, pohledy a animace.</p>
 
@@ -524,7 +522,6 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
   });  
     </script>
   </div>
-  </div>
 </section>
 
 
@@ -582,46 +579,6 @@ zpracujeme co si budete přát a společně vymyslíme nejvhodnější variantu.
 		
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
