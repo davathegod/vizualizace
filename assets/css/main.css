@@ -1969,9 +1969,9 @@ input, select, textarea {
 			}
 
 				.features section .icon {
-		left: 350px;
+		left: 600px;
         position: relative;
-        top: 10px;
+        top: -100px;
 				}
 
 		}
@@ -3921,6 +3921,7 @@ input, select, textarea {
 #four {
   display: none;
 */
+
 
 
 
