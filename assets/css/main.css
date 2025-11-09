@@ -4188,20 +4188,22 @@ div.main-content {
 
 
 /* === Globální kontejnerové nastavení === */
-section, .wrapper, .inner, .container, .mobile-bar {
-  max-width: 1200px;
+	
+section, .wrapper, .container, .mobile-bar {
+  max-width: 1200px !important;
   margin: 0 auto;
   padding: 0 1em;
   box-sizing: border-box;
-}
+ }
 
 /* === Responzivní úpravy === */
 @media screen and (max-width: 980px) {
-  section, .wrapper, .container, .mobile-bar {
-    max-width: 100%;
+  section, .mobile .wrapper, .inner, .container, .mobile-bar {
+    max-width: 100% !important;
     padding: 0 1em;
   }
 }
+
 
 
 
