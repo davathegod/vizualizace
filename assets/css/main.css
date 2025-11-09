@@ -4155,27 +4155,5 @@ input, select, textarea {
 
 
 
-body {
-  overflow-x: hidden; /* Zabrání horizontálnímu posunu */
-}
-
-.mobile-bar {
-  width: 100%;
-  max-width: 100vw;        /* Nikdy nepřesáhne viewport */
-  margin: 0 auto;          /* Zarovnání na střed */
-  padding: 0 1em;          /* Vnitřní mezery místo marginů */
-  box-sizing: border-box;  /* Počítá padding do šířky */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Logo fix */
-.mobile-bar img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 
