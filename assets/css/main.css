@@ -3126,7 +3126,8 @@ input, select, textarea {
 			}
 
 			.spotlights > section > .content {
-				padding: 3em 3.5em 2em 3.5em ;
+				padding: 3em 2em 2em 25em ;
+				margin-right: -50px
 			}
 
 		}
@@ -4151,6 +4152,7 @@ input, select, textarea {
 	
 #four {
   display: none;
+
 
 
 
