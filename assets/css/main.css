@@ -1968,11 +1968,11 @@ input, select, textarea {
 				
 			}
 
-				.features section .icon {
-
-        position: relative;
-        top: 50px;
-				}
+	.features section .icon {
+		left: 150px !important;
+		position: relative;
+		top: 110px !important;
+		}
 
 		}
 
@@ -3921,6 +3921,7 @@ input, select, textarea {
 #four {
   display: none;
 */
+
 
 
 
