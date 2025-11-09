@@ -4107,8 +4107,6 @@ input, select, textarea {
     text-decoration: none;
     font-size: 1.1em;
   }
-
-}
 @media screen and (max-width: 736px) {
   body {
     padding-top: 75px;
@@ -4144,6 +4142,7 @@ input, select, textarea {
   transform: scaleX(1);
 }
 
+}
 
 
 #portfolio {
@@ -4152,6 +4151,7 @@ input, select, textarea {
 	
 #four {
   display: none;
+
 
 
 
