@@ -1,3 +1,4 @@
+
 @import url(fontawesome-all.min.css);
 
 /*
@@ -2062,7 +2063,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #503b24;
+		color: #ffffff;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
@@ -2080,7 +2081,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: #503b24;
+		background: rgba(255, 255, 255, 0.05);
 		border-radius: 0.25em;
 		border: none;
 		border: solid 1px rgba(255, 255, 255, 0.15);
@@ -2122,8 +2123,8 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #503b24;
-			background: #503b24;
+			color: #ffffff;
+			background: #312450;
 		}
 
 		select:focus::-ms-value {
@@ -2192,7 +2193,7 @@ input, select, textarea {
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				background: #503b24;
+				background: rgba(255, 255, 255, 0.05);
 				border-radius: 0.25em;
 				border: solid 1px rgba(255, 255, 255, 0.15);
 				content: '';
@@ -2209,7 +2210,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #503b24;
+			background: #ffffff;
 			border-color: #ffffff;
 			color: #b74e91;
 			content: '\f00c';
@@ -2230,22 +2231,22 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: #503b24 !important;
+		color: rgba(255, 255, 255, 0.35) !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: #503b24 !important;
+		color: rgba(255, 255, 255, 0.35) !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: #503b24 !important;
+		color: rgba(255, 255, 255, 0.35) !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: #503b24 !important;
+		color: rgba(255, 255, 255, 0.35) !important;
 		opacity: 1.0;
 	}
 
@@ -3917,9 +3918,6 @@ input, select, textarea {
 	
 #four {
   display: none;
-
-
-
 
 
 
