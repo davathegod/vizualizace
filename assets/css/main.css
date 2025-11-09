@@ -3992,7 +3992,7 @@ input, select, textarea {
     top: 0;
     left: 0;
     z-index: 9999;
-	width:100%;
+	max-width: 736px;
 	  
 
   }
@@ -4003,7 +4003,7 @@ input, select, textarea {
     background-color: #000000;
     display: flex;
     align-items: center;
-	max-width: 100%;
+	max-width: 736px;
     justify-content: space-between;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
@@ -4130,7 +4130,7 @@ input, select, textarea {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  max-width: 736px;
   height: 4px; /* zvýšeno z 2px na 4px */
   background-color: #b74e91;
   transform: scaleX(0);
@@ -4151,6 +4151,7 @@ input, select, textarea {
 	
 #four {
   display: none;
+
 
 
 
