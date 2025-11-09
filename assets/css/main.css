@@ -4047,7 +4047,7 @@ input, select, textarea {
   border: none;
   cursor: pointer;
   position: relative;
-  left: 50px;
+  left: 25px;
   z-index: 10000;
   box-sizing: border-box;
   gap: 6px;
@@ -4176,5 +4176,6 @@ body {
   height: auto;
   display: block;
 }
+
 
 
