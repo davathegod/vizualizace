@@ -2062,7 +2062,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #ffffff;
+		color: #503b24;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
@@ -2080,7 +2080,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: rgba(255, 255, 255, 0.05);
+		background: #503b24;
 		border-radius: 0.25em;
 		border: none;
 		border: solid 1px rgba(255, 255, 255, 0.15);
@@ -3917,6 +3917,7 @@ input, select, textarea {
 	
 #four {
   display: none;
+
 
 
 
