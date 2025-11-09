@@ -3937,16 +3937,14 @@ input, select, textarea {
 a.gradient-text,
 .wrapper a.gradient-text {
   color: transparent !important;
-   background: linear-gradient(to right, #00ff85, #0078ff) !important;
+   background: linear-gradient( to right, #00ff85, #0078ff) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   text-decoration: none !important;
 }
 
-/* Volitelně animovaný hover */
-a.gradient-text:hover {
-  background: linear-gradient(90deg, #6a11cb, #2575fc, #00c6ff) !important;
-}
+
+
 
 
 
