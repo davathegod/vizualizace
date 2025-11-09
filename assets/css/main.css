@@ -3720,7 +3720,6 @@ input, select, textarea {
 
 #hero a:hover::after {
   transform: scaleX(1);
-	background-color: #312450
 }
 
 /* Odstranění teček z odkazů pokud jsou ve <ul> */
@@ -3921,24 +3920,7 @@ input, select, textarea {
 
 
 
-.gradient-text {
-   background: linear-gradient(to right, #3c23af, #73f33b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  display: inline-block;
-  font-weight: 600;
-}
 
-/* Pokud je to uvnitř <a>, tento fix je nutný */
-a.gradient-text,
-.wrapper a.gradient-text {
-  color: transparent !important;
-   background: linear-gradient( to right, #3c23af, #73f33b) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  text-decoration: none !important;
-}
 
 
 
