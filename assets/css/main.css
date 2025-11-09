@@ -1940,7 +1940,7 @@ input, select, textarea {
 			-webkit-transform: scale(0.5);
 			-ms-transform: scale(0.5);
 			transform: scale(0.5);
-			opacity: 0;
+			opacity: 1;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -3919,6 +3919,7 @@ input, select, textarea {
 #four {
   display: none;
 */
+
 
 
 
