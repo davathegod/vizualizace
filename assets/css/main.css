@@ -3521,7 +3521,7 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-			#sidebar nav a:before, #sidebar nav a:after {
+			#sidebar nav a:before {
 				border-radius: 0.2em;
 				bottom: 0;
 				content: '';
@@ -3529,11 +3529,9 @@ input, select, textarea {
 				position: absolute;
 				right: 0;
 				width: 100%;
-			}
-
-			#sidebar nav a:before {
 				background: #73f33b;
 			}
+
 
 			#sidebar nav a:after {
 				content: '';
@@ -3944,6 +3942,7 @@ a.gradient-text,
   -webkit-text-fill-color: transparent !important;
   text-decoration: none !important;
 }
+
 
 
 
