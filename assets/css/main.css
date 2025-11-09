@@ -173,7 +173,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: black;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
@@ -2747,7 +2747,7 @@ input, select, textarea {
 
 			.split > * {
 				margin: 3em 0 0 0;
-				padding: 3em 5 0 0 ;
+				padding: 3em 0 0 0 ;
 			}
 
 		}
@@ -2893,8 +2893,8 @@ input, select, textarea {
 			}
 
 			.spotlights > section > .content {
-				padding: 3em 2em 2em 25em ;
-				margin-right: -50px
+				padding: 3em 2em 2em 2em ;
+				margin-right: 0
 			}
 
 		}
@@ -3642,7 +3642,6 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url('../images/background.jpg');
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
@@ -3721,6 +3720,7 @@ input, select, textarea {
 
 #hero a:hover::after {
   transform: scaleX(1);
+	background-color: #312450
 }
 
 /* Odstranění teček z odkazů pokud jsou ve <ul> */
@@ -3939,6 +3939,7 @@ a.gradient-text,
   -webkit-text-fill-color: transparent !important;
   text-decoration: none !important;
 }
+
 
 
 
