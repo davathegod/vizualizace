@@ -2980,7 +2980,7 @@ input, select, textarea {
 
 			.split > * {
 				margin: 3em 0 0 0;
-				padding: 3em 0 0 0;
+				padding: 3em 5 0 0 ;
 			}
 
 		}
@@ -3126,7 +3126,7 @@ input, select, textarea {
 			}
 
 			.spotlights > section > .content {
-				padding: 3em 2em 1em 2em ;
+				padding: 3em 2em 2em 2em ;
 			}
 
 		}
@@ -4151,6 +4151,7 @@ input, select, textarea {
 	
 #four {
   display: none;
+
 
 
 
