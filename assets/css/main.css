@@ -3521,7 +3521,7 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-			#sidebar nav a:before {
+			#sidebar nav a:before, #sidebar nav a:after {
 				border-radius: 0.2em;
 				bottom: 0;
 				content: '';
@@ -3529,27 +3529,27 @@ input, select, textarea {
 				position: absolute;
 				right: 0;
 				width: 100%;
+			}
+
+			#sidebar nav a:before {
 				background: #73f33b;
 			}
 
-
 			#sidebar nav a:after {
-				content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px; /* zvýšeno z 2px na 4px */
-  background-color: #3c2c62;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
+				background-image: -moz-linear-gradient(to right, #73f33b, #3c2c62);
+				background-image: -webkit-linear-gradient(to right, #73f33b, #3c2c62);
+				background-image: -ms-linear-gradient(to right, #73f33b, #3c2c62);
+				background-image: linear-gradient(to right, #73f33b, #3c2c62);
+				-moz-transition: max-width 0.2s ease;
+				-webkit-transition: max-width 0.2s ease;
+				-ms-transition: max-width 0.2s ease;
+				transition: max-width 0.2s ease;
+				max-width: 0;
 			}
 
-			#sidebar nav a:hover::after {
-  transform: scaleX(1);
-}
+			#sidebar nav a:hover {
+				color: rgba(255, 255, 255, 0.55);
+			}
 
 			#sidebar nav a.active {
 				color: #ffffff;
@@ -3942,6 +3942,7 @@ a.gradient-text,
   -webkit-text-fill-color: transparent !important;
   text-decoration: none !important;
 }
+
 
 
 
