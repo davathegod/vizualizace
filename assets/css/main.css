@@ -3925,6 +3925,11 @@ input, select, textarea {
 
 
 
+.icon.major {
+  background: transparent !important;
+  color: rgba(0, 0, 0, 0.5); /* černá ikona, 50 % průhlednost */
+  box-shadow: none !important;
+}
 
 
 
