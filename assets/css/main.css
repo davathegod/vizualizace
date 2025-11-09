@@ -3931,12 +3931,23 @@ input, select, textarea {
   color: transparent;
   display: inline-block;
   font-weight: 600;
-  transition: background 0.5s ease;
 }
 
-.gradient-text:hover {
-  background: linear-gradient(90deg, #6a11cb, #2575fc, #00c6ff);
+/* Pokud je to uvnitř <a>, tento fix je nutný */
+a.gradient-text,
+.wrapper a.gradient-text {
+  color: transparent !important;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a11cb) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-decoration: none !important;
 }
+
+/* Volitelně animovaný hover */
+a.gradient-text:hover {
+  background: linear-gradient(90deg, #6a11cb, #2575fc, #00c6ff) !important;
+}
+
 
 
 
