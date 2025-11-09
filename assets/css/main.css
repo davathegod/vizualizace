@@ -2122,8 +2122,8 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #ffffff;
-			background: #312450;
+			color: #503b24;
+			background: #503b24;
 		}
 
 		select:focus::-ms-value {
@@ -2230,17 +2230,17 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.35) !important;
+		color: #503b24 !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.35) !important;
+		color: #503b24 !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.35) !important;
+		color: #503b24 !important;
 		opacity: 1.0;
 	}
 
@@ -3917,6 +3917,7 @@ input, select, textarea {
 	
 #four {
   display: none;
+
 
 
 
