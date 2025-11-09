@@ -3532,7 +3532,7 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #3c2c62;
+				background: #73f33b;
 			}
 
 			#sidebar nav a:after {
@@ -3542,7 +3542,7 @@ input, select, textarea {
   bottom: 0;
   width: 100%;
   height: 4px; /* zvýšeno z 2px na 4px */
-  background-color: #73f33b;
+  background-color: #3c2c62;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -3944,6 +3944,7 @@ a.gradient-text,
   -webkit-text-fill-color: transparent !important;
   text-decoration: none !important;
 }
+
 
 
 
