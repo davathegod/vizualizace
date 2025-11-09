@@ -3925,9 +3925,17 @@ input, select, textarea {
 
 
 .gradient-text {
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a11cb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  font-weight: 600;
+  transition: background 0.5s ease;
+}
+
+.gradient-text:hover {
+  background: linear-gradient(90deg, #6a11cb, #2575fc, #00c6ff);
 }
 
 
