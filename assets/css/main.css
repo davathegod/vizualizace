@@ -3925,7 +3925,7 @@ input, select, textarea {
 
 
 .gradient-text {
-  background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a11cb);
+   background: linear-gradient(to right, #00ff85, #0078ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
@@ -3937,7 +3937,7 @@ input, select, textarea {
 a.gradient-text,
 .wrapper a.gradient-text {
   color: transparent !important;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a11cb) !important;
+   background: linear-gradient(to right, #00ff85, #0078ff) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   text-decoration: none !important;
@@ -3947,6 +3947,7 @@ a.gradient-text,
 a.gradient-text:hover {
   background: linear-gradient(90deg, #6a11cb, #2575fc, #00c6ff) !important;
 }
+
 
 
 
