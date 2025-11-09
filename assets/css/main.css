@@ -3999,10 +3999,12 @@ input, select, textarea {
 
   .mobile-bar {
     height: 75px;
+	box-sizing: border-box;
     background-color: #000000;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+	max-width: 100%;
+    justify-content: space-between;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
@@ -4171,6 +4173,7 @@ html, body {
 
 #four {
   display: none;
+
 
 
 
