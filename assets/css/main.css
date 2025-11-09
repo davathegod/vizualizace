@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-	background-image: url('images/background.jpg') no-repeat center center fixed;
+
 	background-size: cover;
 }
 
@@ -2792,7 +2792,7 @@ input, select, textarea {
 				-webkit-transition: opacity 1s ease;
 				-ms-transition: opacity 1s ease;
 				transition: opacity 1s ease;
-				background: rgba(49, 36, 80, 0.9);
+
 				content: '';
 				display: block;
 				height: 100%;
@@ -3536,10 +3536,10 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #3c23af, #77f13f);
+				background-image: -webkit-linear-gradient(to right, #3c23af, #77f13f);
+				background-image: -ms-linear-gradient(to right, #3c23af, #77f13f);
+				background-image: linear-gradient(to right, #3c23af, #77f13f);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3925,7 +3925,7 @@ input, select, textarea {
 
 
 .gradient-text {
-   background: linear-gradient(to right, #00ff85, #0078ff);
+   background: linear-gradient(to right, #3c23af, #73f33b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
@@ -3937,11 +3937,12 @@ input, select, textarea {
 a.gradient-text,
 .wrapper a.gradient-text {
   color: transparent !important;
-   background: linear-gradient( to right, #00ff85, #0078ff) !important;
+   background: linear-gradient( to right, #3c23af, #73f33b) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   text-decoration: none !important;
 }
+
 
 
 
