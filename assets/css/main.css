@@ -4144,67 +4144,37 @@ input, select, textarea {
   transform: scaleX(1);
 }
 
-/* Odstranění teček z odkazů pokud jsou ve <ul> */
-#mobile-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+
 
 #portfolio {
   display: none;
 
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-	@media screen and (max-width: 736px) {
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-}
-
+	
 #four {
   display: none;
 
 
-.container, 
-.wrapper, 
-section, 
-div.main-content {
-  max-width: 1200px;      /* maximální šířka na velkých monitorech */
-  margin: 0 auto;         /* zarovnání na střed */
-  padding: 0 1em;         /* vnitřní mezera od okraje */
-  box-sizing: border-box; /* aby padding neovlivňoval šířku */
+
+body {
+  overflow-x: hidden; /* Zabrání horizontálnímu posunu */
 }
 
-
-
-/* === Globální kontejnerové nastavení === */
-	
-section, .wrapper, .container, .mobile-bar {
-  max-width: 1200px !important;
-  margin: 0 auto;
-  padding: 0 1em;
-  box-sizing: border-box;
- }
-
-/* === Responzivní úpravy === */
-@media screen and (max-width: 980px) {
-  section, .mobile .wrapper, .inner, .container, .mobile-bar {
-    max-width: 100% !important;
-    padding: 0 1em;
-  }
+.mobile-bar {
+  width: 100%;
+  max-width: 100vw;        /* Nikdy nepřesáhne viewport */
+  margin: 0 auto;          /* Zarovnání na střed */
+  padding: 0 1em;          /* Vnitřní mezery místo marginů */
+  box-sizing: border-box;  /* Počítá padding do šířky */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-
+/* Logo fix */
+.mobile-bar img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 
