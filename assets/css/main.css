@@ -2192,7 +2192,7 @@ input, select, textarea {
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				background: rgba(255, 255, 255, 0.05);
+				background: #503b24;
 				border-radius: 0.25em;
 				border: solid 1px rgba(255, 255, 255, 0.15);
 				content: '';
@@ -2209,7 +2209,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #ffffff;
+			background: #503b24;
 			border-color: #ffffff;
 			color: #b74e91;
 			content: '\f00c';
@@ -2245,7 +2245,7 @@ input, select, textarea {
 	}
 
 	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.35) !important;
+		color: #503b24 !important;
 		opacity: 1.0;
 	}
 
@@ -3917,6 +3917,7 @@ input, select, textarea {
 	
 #four {
   display: none;
+
 
 
 
