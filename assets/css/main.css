@@ -1965,6 +1965,7 @@ input, select, textarea {
 
 			.features section {
 				padding: 2.5em 1.5em 0.1em 5.5em ;
+				margin-left: 5EM;
 			}
 
 				.features section .icon {
@@ -3919,6 +3920,7 @@ input, select, textarea {
 #four {
   display: none;
 */
+
 
 
 
