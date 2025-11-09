@@ -4175,10 +4175,33 @@ html, body {
   display: none;
 
 
+.container, 
+.wrapper, 
+section, 
+div.main-content {
+  max-width: 1200px;      /* maximální šířka na velkých monitorech */
+  margin: 0 auto;         /* zarovnání na střed */
+  padding: 0 1em;         /* vnitřní mezera od okraje */
+  box-sizing: border-box; /* aby padding neovlivňoval šířku */
+}
 
 
 
+/* === Globální kontejnerové nastavení === */
+section, .wrapper, .inner, .container, .mobile-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
 
+/* === Responzivní úpravy === */
+@media screen and (max-width: 980px) {
+  section, .wrapper, .container, .mobile-bar {
+    max-width: 100%;
+    padding: 0 1em;
+  }
+}
 
 
 
