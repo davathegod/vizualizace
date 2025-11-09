@@ -153,13 +153,13 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
-		color: inherit;
+		
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #ffffff;
+			
 		}
 
 	strong, b {
@@ -3947,6 +3947,7 @@ a.gradient-text,
 a.gradient-text:hover {
   background: linear-gradient(90deg, #6a11cb, #2575fc, #00c6ff) !important;
 }
+
 
 
 
