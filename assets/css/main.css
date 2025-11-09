@@ -3704,7 +3704,6 @@ input, select, textarea {
 #hero a {
   position: relative;
   text-decoration: none;
-  color: white;
   transition: color 0.3s ease;
   display: inline-block;
   padding-bottom: 0.2em;
@@ -3930,6 +3929,7 @@ input, select, textarea {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 
 
