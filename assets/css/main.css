@@ -245,6 +245,7 @@ input, select, textarea {
 
 		h3 {
 			font-size: 1em;
+			padding-top:2em;
 		}
 
 		h4 {
@@ -1964,7 +1965,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.features section {
-				padding: 2.5em 1.5em 0.1em 5.5em ;
+				padding: 3.5em 1.5em 0.1em 1.5em ;
 				
 			}
 
@@ -3925,12 +3926,13 @@ input, select, textarea {
 
 @media screen and (max-width: 736px) {
  .icon.major:before {
-    margin-top:2em;
-	 margin-left:3em;
+    margin-top:-2em;
+	 margin-left:-1em;
 
 }
 
 }
+
 
 
 
