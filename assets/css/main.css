@@ -3924,13 +3924,14 @@ input, select, textarea {
 
 
 @media screen and (max-width: 736px) {
- .icon.major {
+ .icon.major:before {
     margin-top:2em;
-	 margin-left:3em
+	 margin-left:3em;
 
 }
 
 }
+
 
 
 
