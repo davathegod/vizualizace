@@ -551,6 +551,55 @@
   </div>
 </footer>
 </div>
+
+
+<!-- Cookie popup -->
+<div id="cookie-popup" style="
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a1a1a;
+  color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 450px;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  display: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+">
+  <h2 style="margin-bottom: 15px;">Tento web používá cookies</h2>
+  <p style="margin-bottom: 20px; font-size: 0.95em;">
+    Používáme cookies pro analýzu návštěvnosti a zlepšení služeb. Souhlasíte s jejich použitím?
+  </p>
+  <div>
+    <button id="cookie-accept" style="
+      background: #4caf50;
+      border: none;
+      padding: 10px 25px;
+      color: white;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    ">Souhlasím</button>
+
+    <button id="cookie-decline" style="
+      background: #777;
+      border: none;
+      padding: 10px 25px;
+      color: white;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    ">Odmítám</button>
+  </div>
+</div>
+
+
+	  
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -592,9 +641,54 @@
     mirror: true   
   });
 </script>
-		
+
+
+	  <!-- Google tag (gtag.js) bude spuštěn až po souhlasu -->
+<script>
+  function loadGA() {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-S57JWNMEVR";
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S57JWNMEVR');
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("cookieConsent") === "accepted") {
+      loadGA();
+    }
+  });
+</script>
+
+	  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("cookie-popup");
+
+    // zobraz popup jen pokud už uživatel nesouhlasil
+    if (!localStorage.getItem("cookieConsent")) {
+      popup.style.display = "block";
+    }
+
+    document.getElementById("cookie-accept").onclick = () => {
+      localStorage.setItem("cookieConsent", "accepted");
+      popup.style.display = "none";
+      loadGA(); // spustí GA až po souhlasu
+    };
+
+    document.getElementById("cookie-decline").onclick = () => {
+      localStorage.setItem("cookieConsent", "declined");
+      popup.style.display = "none";
+    };
+  });
+</script>
+	  
 </body>
 </html>
+
 
 
 
