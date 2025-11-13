@@ -3294,7 +3294,7 @@ input, select, textarea {
 /* Sidebar */
 
 	#sidebar {
-		padding: 2.5em 3em 0em 1.5em ;
+		padding: 2.5em 1em 0em 1.5em ;
 		background: #312450;
 		cursor: default;
 		height: 100vh;
@@ -3921,6 +3921,7 @@ input, select, textarea {
 #four {
   display: none;
 */
+
 
 
 
