@@ -245,11 +245,12 @@ input, select, textarea {
 
 		h3 {
 			font-size: 1em;
-			padding-top:2em;
+			
 		}
 
 		h4 {
-			font-size: 0.8em;
+			font-size: 1em;
+			padding-top:2em;
 		}
 
 		h5 {
@@ -3932,6 +3933,7 @@ input, select, textarea {
 }
 
 }
+
 
 
 
