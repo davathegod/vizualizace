@@ -2987,7 +2987,7 @@ input, select, textarea {
 			@media screen and (max-width: 1680px) {
 
 				.wrapper > .inner {
-					padding: 4em 7em 2em 4em ;
+					padding: 3em 1.7em 1em 1.7em ;
 				}
 
 			}
@@ -2995,7 +2995,7 @@ input, select, textarea {
 			@media screen and (max-width: 1280px) {
 
 				.wrapper > .inner {
-					width: 100%;
+					width: 87vw;
 				}
 
 			}
@@ -3933,6 +3933,7 @@ input, select, textarea {
 }
 
 }
+
 
 
 
