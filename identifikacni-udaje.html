@@ -13,22 +13,40 @@
 </head>
 	<body class="is-preload" >
 
+<!-- Mobilní hlavička (zobrazí se jen na mobilu) -->
+	
+<header id="mobile-header" ; style="width: 100vw";>
+	<div class="inner">
+  <div class="mobile-bar" >
+  <div class="logo" style="display: flex; align-items: center; gap: 0.5em;">
+    <a href="#hero" class="logo-link">
+  <img src="images/logo2.webp" alt="Logo" />
+</a>
+    <span style="color: white; font-size: 1.2em; font-weight: bold;">PROvizualizace</span>
+  </div>
+ <button id="mobile-menu-toggle" aria-label="Otevřít menu">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+</div>
+  <nav id="mobile-menu">
+    <ul>
+      <li><a href="#two">naše služby</a></li>
+ <li><a href="#four">ceník</a></li>
+      <li><a href="#one">o nás</a></li>
+      <li><a href="#three">kontakt</a></li>
+ <!--  <li><a href="#portfolio">portfolio</a></li>  -->
+    </ul>
+  </nav>
+		</div>	
+</header>
+		
 	<!-- Header -->
 <header id="header" style="display: flex; justify-content: space-between; align-items: center; background: white; flex-wrap: wrap; background-color: #312450; background-size: cover ;
 		 background-position: center; margin-left:-0.5em; margin-top:-1em; margin-bottom:-1em; height:230px;">
 
-  <!-- Levá část: logo a název -->
-  <div style="display: flex; flex-direction: column; align-items: flex-start; ">
-    <!-- Logo -->
-    <a href="index.html" class="ignore-scrolly" style="display: inline-block; width: 100px; height: 100px;">
-      <img src="images/logo2.webp" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;" />
-    </a>
 
-    <!-- Název -->
-    <a href="index.html" style="text-decoration: none;">
-      <h1 style="font-size: 1.8em; color: black; margin-top: 10px;">PROvizualizace</h1>
-    </a>
-  </div>
 
   <!-- Pravá část: navigace -->
   <nav style="display: flex; gap: 25px; flex-wrap: wrap; text-align: right;padding-left:4em">
@@ -86,6 +104,7 @@ Tel.: +420 722 411 430<br>
 	</body>
 
 </html>
+
 
 
 
