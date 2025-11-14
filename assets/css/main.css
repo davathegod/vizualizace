@@ -3003,7 +3003,7 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				.wrapper > .inner {
-					padding: 0 ;
+					padding: 3em -2em 1em 2em ;
 				}
 
 			}
@@ -3933,6 +3933,7 @@ input, select, textarea {
 }
 
 }
+
 
 
 
