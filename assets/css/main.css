@@ -2995,7 +2995,7 @@ input, select, textarea {
 			@media screen and (max-width: 1280px) {
 
 				.wrapper > .inner {
-					width: 87vw;
+					width: 83vw;
 				}
 
 			}
@@ -3933,6 +3933,7 @@ input, select, textarea {
 }
 
 }
+
 
 
 
